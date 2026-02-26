@@ -1,43 +1,50 @@
-import nodemailer from 'nodemailer';
-
-const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
-const SMTP_PORT = Number(process.env.SMTP_PORT || '465');
-const SMTP_SECURE = (process.env.SMTP_SECURE || 'true').toLowerCase() === 'true';
-const SMTP_USER = process.env.SMTP_USER;
-const SMTP_PASS = process.env.SMTP_PASS;
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const RESEND_FROM = process.env.RESEND_FROM || 'noreply@bornandbrand.com';
 const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL;
 
 function hasMailConfig(): boolean {
-  return Boolean(SMTP_USER && SMTP_PASS && NOTIFY_EMAIL);
+  return Boolean(RESEND_API_KEY && NOTIFY_EMAIL);
 }
 
-export async function sendNotificationEmail(subject: string, body: string): Promise<void> {
+function truncateText(value: string, maxLength = 500): string {
+  return value.length > maxLength ? `${value.slice(0, maxLength)}...` : value;
+}
+
+export async function sendNotificationEmail(subject: string, body: string): Promise<boolean> {
   if (!hasMailConfig()) {
-    console.warn('Email notifications skipped: missing SMTP or NOTIFY_EMAIL env vars');
-    return;
+    console.warn('Email notifications skipped: missing RESEND_API_KEY or NOTIFY_EMAIL env vars');
+    return false;
   }
 
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: SMTP_PORT,
-    secure: SMTP_SECURE,
-    connectionTimeout: 15000,
-    greetingTimeout: 15000,
-    socketTimeout: 20000,
-    auth: {
-      user: SMTP_USER,
-      pass: SMTP_PASS,
-    },
-  });
+  console.log(`[mailer] Resend attempt: subject="${subject}" to="${NOTIFY_EMAIL}" from="${RESEND_FROM}"`);
 
-  console.log(`Attempting email notification: ${subject}`);
+  try {
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: RESEND_FROM,
+        to: [NOTIFY_EMAIL],
+        subject,
+        text: body,
+      }),
+    });
+    const responseBody = await response.text();
 
-  await transporter.sendMail({
-    from: `Trouble on Mondays <${SMTP_USER}>`,
-    to: NOTIFY_EMAIL,
-    subject,
-    text: body,
-  });
+    if (!response.ok) {
+      console.warn(
+        `[mailer] Resend failed: status=${response.status} body="${truncateText(responseBody)}"`,
+      );
+      return false;
+    }
 
-  console.log(`Email notification sent: ${subject}`);
+    console.log(`[mailer] Resend sent: status=${response.status} subject="${subject}"`);
+    return true;
+  } catch (error) {
+    console.warn('[mailer] Resend request failed', error);
+    return false;
+  }
 }
