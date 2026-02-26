@@ -15,6 +15,9 @@ export default function AdminPage() {
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [pendingActions, setPendingActions] = useState<Record<number, 'approved' | 'rejected'>>({});
+  const [expandedRows, setExpandedRows] = useState<Record<number, boolean>>({});
+  const [actionMessage, setActionMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   const fetchSubmissions = useCallback(async () => {
     setLoading(true);
@@ -43,6 +46,9 @@ export default function AdminPage() {
   }, [authed, fetchSubmissions]);
 
   async function handleStatusChange(id: number, status: 'approved' | 'rejected') {
+    setPendingActions((prev) => ({ ...prev, [id]: status }));
+    setActionMessage(null);
+
     try {
       const res = await fetch('/api/admin/submissions', {
         method: 'PATCH',
@@ -52,13 +58,26 @@ export default function AdminPage() {
         },
         body: JSON.stringify({ id, status }),
       });
-      if (res.ok) {
-        setSubmissions((prev) =>
-          prev.map((s) => (s.id === id ? { ...s, status } : s))
-        );
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok || !data.success) {
+        const reason = typeof data.error === 'string' ? data.error : 'Failed to update submission status';
+        setActionMessage({ type: 'error', text: reason });
+        return;
       }
+
+      setSubmissions((prev) =>
+        prev.map((s) => (s.id === id ? { ...s, status } : s))
+      );
+      setActionMessage({ type: 'success', text: `Submission #${id} marked ${status}.` });
     } catch {
-      // silently fail
+      setActionMessage({ type: 'error', text: 'Failed to update submission status' });
+    } finally {
+      setPendingActions((prev) => {
+        const next = { ...prev };
+        delete next[id];
+        return next;
+      });
     }
   }
 
@@ -104,6 +123,18 @@ export default function AdminPage() {
         <span className="text-sm text-slate-400">{submissions.length} total</span>
       </div>
 
+      {actionMessage && (
+        <div
+          className={`mb-4 rounded-xl border px-4 py-2 text-sm ${
+            actionMessage.type === 'success'
+              ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+              : 'border-red-500/20 bg-red-500/10 text-red-600 dark:text-red-400'
+          }`}
+        >
+          {actionMessage.text}
+        </div>
+      )}
+
       {submissions.length === 0 ? (
         <div className="text-center py-16 text-slate-400 dark:text-slate-500">
           No submissions yet.
@@ -121,44 +152,66 @@ export default function AdminPage() {
               </tr>
             </thead>
             <tbody>
-              {submissions.map((sub) => (
-                <tr
-                  key={sub.id}
-                  className="border-b border-slate-100 dark:border-white/[0.03] last:border-0 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors"
-                >
-                  <td className="px-5 py-4">
-                    <div className="font-medium mb-0.5 max-w-[300px] truncate">{sub.title}</div>
-                    <div className="text-slate-400 dark:text-slate-500 text-xs max-w-[300px] truncate">{sub.content}</div>
-                  </td>
-                  <td className="px-5 py-4 text-slate-500">{sub.category}</td>
-                  <td className="px-5 py-4 text-slate-400 whitespace-nowrap text-xs">{new Date(sub.created_at).toLocaleDateString()}</td>
-                  <td className="px-5 py-4">
-                    <span className={`inline-flex px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider border ${statusColors[sub.status]}`}>
-                      {sub.status}
-                    </span>
-                  </td>
-                  <td className="px-5 py-4">
-                    <div className="flex gap-2">
-                      {sub.status !== 'approved' && (
+              {submissions.map((sub) => {
+                const isExpanded = Boolean(expandedRows[sub.id]);
+                const isPending = Boolean(pendingActions[sub.id]);
+                const shouldTruncate = sub.content.length > 180 && !isExpanded;
+                const contentPreview = shouldTruncate ? `${sub.content.slice(0, 180)}...` : sub.content;
+
+                return (
+                  <tr
+                    key={sub.id}
+                    className="border-b border-slate-100 dark:border-white/[0.03] last:border-0 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors"
+                  >
+                    <td className="px-5 py-4">
+                      <div className="font-medium mb-0.5 max-w-[300px] truncate">{sub.title}</div>
+                      <div className={`text-slate-400 dark:text-slate-500 text-xs max-w-[300px] ${isExpanded ? 'whitespace-pre-wrap break-words' : ''}`}>
+                        {contentPreview}
+                      </div>
+                      {sub.content.length > 180 && (
                         <button
-                          onClick={() => handleStatusChange(sub.id, 'approved')}
-                          className="px-2.5 py-1 bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/20 text-xs font-semibold rounded-lg transition-colors cursor-pointer"
+                          type="button"
+                          onClick={() =>
+                            setExpandedRows((prev) => ({ ...prev, [sub.id]: !prev[sub.id] }))
+                          }
+                          className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors cursor-pointer"
                         >
-                          Approve
+                          {isExpanded ? 'Collapse' : 'Read more'}
                         </button>
                       )}
-                      {sub.status !== 'rejected' && (
-                        <button
-                          onClick={() => handleStatusChange(sub.id, 'rejected')}
-                          className="px-2.5 py-1 bg-red-500/10 text-red-500 hover:bg-red-500/20 text-xs font-semibold rounded-lg transition-colors cursor-pointer"
-                        >
-                          Reject
-                        </button>
-                      )}
-                    </div>
-                  </td>
-                </tr>
-              ))}
+                    </td>
+                    <td className="px-5 py-4 text-slate-500">{sub.category}</td>
+                    <td className="px-5 py-4 text-slate-400 whitespace-nowrap text-xs">{new Date(sub.created_at).toLocaleDateString()}</td>
+                    <td className="px-5 py-4">
+                      <span className={`inline-flex px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider border ${statusColors[sub.status]}`}>
+                        {sub.status}
+                      </span>
+                    </td>
+                    <td className="px-5 py-4">
+                      <div className="flex gap-2">
+                        {sub.status !== 'approved' && (
+                          <button
+                            onClick={() => handleStatusChange(sub.id, 'approved')}
+                            disabled={isPending}
+                            className="px-2.5 py-1 bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/20 disabled:opacity-60 disabled:cursor-not-allowed text-xs font-semibold rounded-lg transition-colors cursor-pointer"
+                          >
+                            {pendingActions[sub.id] === 'approved' ? 'Approving...' : 'Approve'}
+                          </button>
+                        )}
+                        {sub.status !== 'rejected' && (
+                          <button
+                            onClick={() => handleStatusChange(sub.id, 'rejected')}
+                            disabled={isPending}
+                            className="px-2.5 py-1 bg-red-500/10 text-red-500 hover:bg-red-500/20 disabled:opacity-60 disabled:cursor-not-allowed text-xs font-semibold rounded-lg transition-colors cursor-pointer"
+                          >
+                            {pendingActions[sub.id] === 'rejected' ? 'Rejecting...' : 'Reject'}
+                          </button>
+                        )}
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

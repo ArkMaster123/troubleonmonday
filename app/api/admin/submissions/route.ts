@@ -20,23 +20,36 @@ export async function GET(request: NextRequest) {
 
 export async function PATCH(request: NextRequest) {
   if (!checkAuth(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
   }
 
   try {
-    const { id, status } = await request.json();
+    const body = await request.json();
+    const { id, status } = body as { id?: unknown; status?: unknown };
+    const submissionId = Number(id);
+    const allowedStatuses = new Set(['approved', 'rejected']);
 
-    if (!id || !['approved', 'rejected'].includes(status)) {
-      return NextResponse.json({ error: 'Invalid id or status' }, { status: 400 });
+    if (!Number.isFinite(submissionId) || !Number.isInteger(submissionId) || submissionId <= 0) {
+      return NextResponse.json(
+        { success: false, error: 'Invalid submission id. Expected a positive integer.' },
+        { status: 400 }
+      );
     }
 
-    const updated = updateSubmissionStatus(id, status);
+    if (typeof status !== 'string' || !allowedStatuses.has(status)) {
+      return NextResponse.json(
+        { success: false, error: "Invalid status. Expected 'approved' or 'rejected'." },
+        { status: 400 }
+      );
+    }
+
+    const updated = updateSubmissionStatus(submissionId, status as 'approved' | 'rejected');
     if (!updated) {
-      return NextResponse.json({ error: 'Submission not found' }, { status: 404 });
+      return NextResponse.json({ success: false, error: 'Submission not found' }, { status: 404 });
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, id: submissionId, status });
   } catch {
-    return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
+    return NextResponse.json({ success: false, error: 'Something went wrong' }, { status: 500 });
   }
 }
