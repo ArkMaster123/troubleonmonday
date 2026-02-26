@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo:weekly": "node scripts/generate-weekly-posts.mjs"
   },
   "dependencies": {
     "better-sqlite3": "^12.6.2",

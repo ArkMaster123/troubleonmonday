@@ -57,6 +57,21 @@ APP_BASE_URL=https://example.com/troubleonmondays
 ADMIN_PASSWORD=...
 ```
 
+### Weekly SEO post generation
+
+Generate SERP-informed monday.com threads weekly using Bright Data + OpenRouter:
+
+```bash
+BRIGHTDATA_API_KEY=your-brightdata-api-key \
+BRIGHTDATA_ZONE=serp_api1 \
+OPENROUTER_API_KEY=your-openrouter-api-key \
+OPENROUTER_MODEL=minimax/minimax-m2.5 \
+WEEKLY_POST_COUNT=3 \
+npm run seo:weekly -- --dry-run
+```
+
+Run without `--dry-run` to append validated, deduplicated threads to `app/data/threads.json`.
+
 ## Domain
 
 - **Production:** https://troubleonmonday.com (pending DNS setup)
