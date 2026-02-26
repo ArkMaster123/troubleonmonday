@@ -90,15 +90,14 @@ export default async function HomePage() {
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 via-orange-400 to-red-500 bg-[length:200%_100%] animate-gradient-slide" />
         <div className="flex-1">
           <div className="text-[11px] font-bold uppercase tracking-[0.1em] text-red-500 mb-2">
-            monday.com optimization
+            Need hands-on help?
           </div>
           <div className="text-xl font-bold tracking-tight mb-1.5 leading-snug">
-            Stop troubleshooting. Start scaling.
+            Stuck in setup hell? We can fix it with you.
           </div>
           <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-[420px]">
-            Born &amp; Brand helps teams unlock the full power of monday.com
-            &mdash; custom automations, integrations, and workflows that
-            actually work.
+            If your boards are messy or automations keep breaking, we will walk
+            through your setup with you and get it running cleanly.
           </p>
         </div>
         <div className="flex flex-col gap-2 shrink-0 items-center">
@@ -108,7 +107,7 @@ export default async function HomePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold text-sm rounded-lg transition-all hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] hover:-translate-y-0.5 whitespace-nowrap"
           >
-            Get a Free Audit
+            Talk to a Human
             <svg
               className="w-4 h-4"
               viewBox="0 0 24 24"
@@ -123,7 +122,7 @@ export default async function HomePage() {
             </svg>
           </a>
           <span className="text-[11px] text-slate-400 dark:text-slate-500 text-center">
-            Trusted by 100+ teams
+            No fluff. Just practical help.
           </span>
         </div>
       </div>
