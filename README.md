@@ -51,6 +51,9 @@ SUBMISSIONS_DB_PATH=/home/noah/data/troubleonmonday.db
 RESEND_API_KEY=...
 RESEND_FROM=noreply@example.com
 NOTIFY_EMAIL=moderation@example.com
+REPLY_TO_EMAIL=replyto@example.com
+ADMIN_ACTION_SECRET=replace-with-a-long-random-secret
+APP_BASE_URL=https://example.com/troubleonmondays
 ADMIN_PASSWORD=...
 ```
 
