@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #ef4444;
+  --color-brand-600: #dc2626;
+  --color-brand-700: #b91c1c;
+  --color-brand-800: #991b1b;
+  --color-brand-900: #7f1d1d;
+
+  --color-cat-comparison: #3b82f6;
+  --color-cat-comparison-bg: color-mix(in srgb, #3b82f6 12%, transparent);
+  --color-cat-pricing: #f59e0b;
+  --color-cat-pricing-bg: color-mix(in srgb, #f59e0b 12%, transparent);
+  --color-cat-tutorial: #10b981;
+  --color-cat-tutorial-bg: color-mix(in srgb, #10b981 12%, transparent);
+  --color-cat-crm: #a855f7;
+  --color-cat-crm-bg: color-mix(in srgb, #a855f7 12%, transparent);
+  --color-cat-templates: #eab308;
+  --color-cat-templates-bg: color-mix(in srgb, #eab308 12%, transparent);
+  --color-cat-features: #ef4444;
+  --color-cat-features-bg: color-mix(in srgb, #ef4444 12%, transparent);
+  --color-cat-integrations: #6366f1;
+  --color-cat-integrations-bg: color-mix(in srgb, #6366f1 12%, transparent);
+  --color-cat-api: #06b6d4;
+  --color-cat-api-bg: color-mix(in srgb, #06b6d4 12%, transparent);
+  --color-cat-security: #f43f5e;
+  --color-cat-security-bg: color-mix(in srgb, #f43f5e 12%, transparent);
+  --color-cat-industry: #8b5cf6;
+  --color-cat-industry-bg: color-mix(in srgb, #8b5cf6 12%, transparent);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes gradient-slide {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+
+.animate-gradient-slide {
+  animation: gradient-slide 4s linear infinite;
+}

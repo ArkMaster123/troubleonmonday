@@ -1,0 +1,637 @@
+1:"$Sreact.fragment"
+2:I[2619,["619","static/chunks/619-ba102abea3e3d0e4.js","177","static/chunks/app/layout-258951dc6b8c8910.js"],""]
+3:I[909,["619","static/chunks/619-ba102abea3e3d0e4.js","177","static/chunks/app/layout-258951dc6b8c8910.js"],"default"]
+4:I[9766,[],""]
+5:I[8924,[],""]
+b:I[7150,[],""]
+:HL["/troubleonmondays/_next/static/css/5519c506af414ec6.css","style"]
+0:{"P":null,"b":"PjDjrbJN7otirC6LrOSM6","p":"/troubleonmondays","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/troubleonmondays/_next/static/css/5519c506af414ec6.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap","rel":"stylesheet"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n    (function() {\n      var theme = localStorage.getItem('theme');\n      if (theme === 'light') {\n        document.documentElement.classList.remove('dark');\n        document.documentElement.style.colorScheme = 'light';\n      } else {\n        document.documentElement.classList.add('dark');\n        document.documentElement.style.colorScheme = 'dark';\n      }\n    })();\n  "}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300","children":[["$","header",null,{"className":"sticky top-0 z-50 h-[60px] bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl backdrop-saturate-150 border-b border-slate-200 dark:border-white/[0.06]","children":["$","div",null,{"className":"max-w-[1140px] mx-auto px-6 h-full flex items-center gap-8","children":[["$","$L2",null,{"href":"/","className":"flex items-center gap-2.5 font-bold text-base tracking-tight whitespace-nowrap","children":[["$","span",null,{"className":"w-7 h-7 bg-red-500 rounded-md flex items-center justify-center text-white font-extrabold text-sm shadow-[0_0_12px_rgba(239,68,68,0.3)]","children":"T"}],["$","span",null,{"children":["trouble",["$","span",null,{"className":"text-red-500","children":"on"}],"mondays"]}]]}],["$","nav",null,{"className":"hidden md:flex gap-1 flex-1","children":[["$","$L2",null,{"href":"/","className":"px-3 py-1.5 text-sm font-medium rounded-md bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50 transition-colors","children":"Discussions"}],["$","$L2",null,{"href":"/","className":"px-3 py-1.5 text-sm font-medium rounded-md text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors","children":"Categories"}],["$","$L2",null,{"href":"/","className":"px-3 py-1.5 text-sm font-medium rounded-md text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors","children":"Popular"}],["$","$L2",null,{"href":"/","className":"px-3 py-1.5 text-sm font-medium rounded-md text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors","children":"Unanswered"}]]}],["$","div",null,{"className":"flex items-center gap-2","children":[["$","$L3",null,{}],["$","button",null,{"id":"new-thread-btn","className":"inline-flex items-center gap-1.5 px-3.5 py-[7px] bg-red-500 hover:bg-red-600 text-white font-semibold text-[13px] rounded-lg transition-all hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] cursor-pointer","children":[["$","svg",null,{"width":"14","height":"14","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"2.5","strokeLinecap":"round","children":[["$","line",null,{"x1":"12","y1":"5","x2":"12","y2":"19"}],["$","line",null,{"x1":"5","y1":"12","x2":"19","y2":"12"}]]}],"New Thread"]}]]}]]}]}],["$","main",null,{"className":"flex-1 px-6","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":"$L6"}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],"$L7","$L8"]}]]}]]}],{"children":["__PAGE__","$L9",{},null,false]},null,false],"$La",false]],"m":"$undefined","G":["$b",[]],"s":false,"S":true}
+c:I[114,["619","static/chunks/619-ba102abea3e3d0e4.js","974","static/chunks/app/page-634540a2b5185047.js"],"default"]
+26:I[4431,[],"ViewportBoundary"]
+28:I[4431,[],"MetadataBoundary"]
+29:"$Sreact.suspense"
+6:["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]
+7:["$","footer",null,{"className":"mt-auto border-t border-slate-200 dark:border-white/[0.06] py-10 px-6 bg-white dark:bg-slate-950","children":["$","div",null,{"className":"max-w-[1140px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4","children":[["$","div",null,{"className":"flex flex-col items-center md:items-start gap-1","children":[["$","span",null,{"className":"text-sm font-semibold text-slate-500 dark:text-slate-400","children":"troubleonmondays"}],["$","span",null,{"className":"text-xs text-slate-400 dark:text-slate-500","children":"Unofficial monday.com community forum"}]]}],["$","div",null,{"className":"flex gap-5","children":[["$","a",null,{"href":"https://bornandbrand.com","target":"_blank","rel":"noopener noreferrer","className":"text-[13px] text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-50 transition-colors","children":"Born & Brand"}],["$","a",null,{"href":"/","className":"text-[13px] text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-50 transition-colors","children":"Privacy"}],["$","a",null,{"href":"/","className":"text-[13px] text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-50 transition-colors","children":"Terms"}]]}]]}]}]
+8:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n    (function() {\n      var newThreadBtn = document.getElementById('new-thread-btn');\n      if (newThreadBtn) {\n        newThreadBtn.addEventListener('click', function() {\n          var el = document.getElementById('discussions');\n          if (el) {\n            el.scrollIntoView({ behavior: 'smooth' });\n          } else {\n            window.location.href = '/#discussions';\n          }\n        });\n      }\n    })();\n  "}}]
+d:T42e,Welcome to the automation game! Here's your starter pack:
+
+**Essential Recipe #1: Status-Driven Notifications**
+Recipe: 'When status changes to something, notify someone'
+Use case: When content moves to 'Ready for Review,' notify your editor automatically.
+
+**Essential Recipe #2: Deadline Reminders**
+Recipe: 'When date arrives, notify someone'
+Use case: 2-day warning before publish dates.
+
+**Essential Recipe #3: Auto-Assignment**
+Recipe: 'When item created, assign someone' or 'When status changes to something, assign someone'
+Use case: Blog posts tagged 'SEO' auto-assign to your SEO specialist.
+
+**Recipe vs Custom:**
+Recipes = Pre-built, reliable, easy to set up. Start here.
+Custom = Build from scratch using triggers and actions. Use when recipes don't cover your specific need.
+
+**Pro tip:** Use the 'Dependencies' automation for your editorial calendar. When the 'Draft' phase completes, it can automatically set the 'Review' phase to start 2 days later.
+
+Start with 3-4 automations, test them thoroughly, then add more. Too many automations at once = chaos.e:T43e,After 2 years of trial and error, here's my recommended setup:
+
+**Start with these 4 boards:**
+
+1. **Content Calendar** (use the Editorial Calendar template)
+   - Modify it to include: Content Type, Target Keyword, Funnel Stage, Distribution Channels
+   - Connect this to your Social Media board
+
+2. **Campaign Tracker** (Campaign Planning template)
+   - One item per campaign with subitems for tactics
+   - Budget tracking column is essential
+
+3. **Creative Requests** (Creative Requests template)
+   - Form view for other departments to submit requests
+   - Priority and Due Date columns with automations
+
+4. **Social Media Content** (Social Media Calendar template)
+   - Link items to Content Calendar for repurposing tracking
+
+**Skip these templates:**
+• The 'Marketing Strategy' template — too vague, you'll never use it
+• Anything with 20+ columns — analysis paralysis
+
+**Structure tip:** Keep boards separate but connected. Use the 'Connect Boards' column to link a blog post to its social promotion tasks and campaign.
+
+Start simple. You can always add complexity later.f:T43c,Native time tracking has limitations, but here's how to maximize it:
+
+**Subtask tracking:** Unfortunately, you can't track time on subitems separately from parent items. Workaround: Make subitems their own items in a separate 'Tasks' board and connect them to the main project. More setup, but gives you granular tracking.
+
+**Client reporting:**
+1. Add a 'Client' dropdown column to your board
+2. Use the Time Tracking widget in dashboards
+3. Filter by client and date range
+4. Export view as PDF for client-friendly reports
+
+**Billable amounts:** Add a Formula column: {Time Tracking#Hours} * {Hourly Rate}
+
+**Export:** Yes! Go to your board → ... menu → Export → Export to Excel. Time tracking data exports with hours broken down.
+
+**Better habits:**
+• Use the mobile app timer — easier to start/stop
+• Set up automations: 'When status changes to In Progress, start time tracking'
+• Add a 'Billable?' checkbox column to separate billable vs internal time
+
+For serious billing, Toggl integration is worth it. But for basic tracking, native works fine with these tweaks.10:T43d,Used both for product teams. Here's the honest breakdown:
+
+**ClickUp pros:**
+• All-in-one (docs, whiteboards, chat) — fewer tools to manage
+• More affordable at scale
+• Incredible customization
+
+**ClickUp cons:**
+• Feature bloat — your team will spend weeks configuring instead of working
+• Steep learning curve — non-technical folks struggle
+• Mobile app is buggy
+• Performance issues with large workspaces
+
+**monday.com pros:**
+• Beautiful, intuitive UI — adoption is fast
+• Stable and fast at scale
+• Better mobile experience
+• Superior automation builder
+
+**monday.com cons:**
+• Docs are basic (we use Notion alongside)
+• Whiteboards limited (we use FigJam)
+• More expensive
+
+**For product teams specifically:**
+ClickUp has native sprint features. monday.com requires more setup but ends up cleaner.
+
+My recommendation: If your team is technical and patient, ClickUp. If you want something that just works out of the box, monday.com.
+
+We chose monday.com and haven't regretted it. We use integrations for docs/whiteboards rather than all-in-one.11:T414,Former MS Project user here. monday.com's Gantt is simpler, but here's how to make it work:
+
+**Setting up dependencies:**
+1. Add a 'Dependency' column
+2. In Gantt view, drag the dependency lines between tasks
+3. Use the automation: 'When this date changes, shift dependent dates'
+
+**Limitations you'll hit:**
+• No true critical path calculation
+• No resource leveling
+• Limited baseline tracking (you can snapshot dates manually)
+
+**Workarounds:**
+For critical path, use color coding. Set a status for 'Critical Path' items and filter by that color in Gantt view.
+
+For resource allocation, add a 'Assigned To' column and use the Workload view (Pro plan). It shows who's overloaded across all projects.
+
+**My honest take:** For construction with 50+ tasks and complex dependencies, monday.com Gantt will frustrate you. Consider:
+• Smartsheet (better Gantt, integrates with monday.com)
+• Keep high-level milestones in monday.com, detailed schedules in MS Project
+
+monday.com excels at team collaboration, not complex project scheduling.12:T42a,I manage 30 field techs using monday.com mobile daily. Here's the real story:
+
+**What works great:**
+• Status updates — one tap, done
+• Photo uploads — camera integration is smooth
+• Push notifications — instant and reliable
+• Offline mode — updates sync when connection returns
+• Time tracking — start/stop timer is easy
+
+**What's frustrating:**
+• Complex boards are hard to navigate on mobile
+• Can't edit formulas or automations
+• Dashboards don't render well (use board views instead)
+• Search is limited
+
+**For field work specifically:**
+• Create mobile-friendly board views with only essential columns
+• Use the 'Cards' view on mobile — much better than table
+• Set up QR codes at job sites that link directly to monday.com items
+• Train techs to use voice-to-text for updates
+
+**Verdict:** For status updates, photos, and time tracking, it's excellent. For complex project management, you'll need desktop.
+
+My techs complete 90% of their monday.com work on mobile. The 10% that requires desktop is planning and reporting.13:T470,Made the switch from Typeform 6 months ago. Here's what you need to know:
+
+**What monday.com Forms CAN do:**
+• All your field types (text, dropdown, date, long text, file upload)
+• Custom branding (logo, colors, cover image)
+• Email notifications on submission (via automation)
+• Auto-assignment based on dropdown selection
+• Pre-fill fields via URL parameters
+
+**What it CAN'T do (vs Typeform):**
+• Conditional logic (show/hide questions) — this is the big one
+• Calculated fields
+• Payment collection
+• Advanced design customization
+• Logic jumps
+
+**The workaround for conditional logic:**
+Create separate forms for different project types, then use a 'router' form that asks 'What type of project?' and redirects to the appropriate form.
+
+**Auto-assignment setup:**
+Automation: 'When item created and Project Type is Website, assign to Sarah'
+
+**My verdict:** If you need simple intake without complex logic, monday.com Forms is perfect and saves you money. If you rely heavily on conditional questions, stick with Typeform or JotForm.
+
+We saved $35/month and gained automatic project creation. Worth it for us.14:T440,Built 50+ executive dashboards. Here's what actually gets used:
+
+**Must-have widgets:**
+
+1. **Battery Widget** (Project Health)
+   - Shows on track/at risk/blocked at a glance
+   - Executives love the traffic light system
+
+2. **Numbers Widget** (KPI Summary)
+   - Total active projects, completion %, budget remaining
+   - Big numbers they can screenshot for presentations
+
+3. **Chart Widget** (Trends)
+   - Line chart of completed tasks over time
+   - Shows velocity trends
+
+4. **Workload Widget** (Resource Management)
+   - Who's overloaded, who has capacity
+   - Essential for resource planning discussions
+
+**Skip these:**
+• Calendar widget (too detailed for execs)
+• File gallery (irrelevant)
+• Most custom chart widgets (overcomplicate)
+
+**Multi-board dashboards:**
+Yes! When adding a widget, select 'Choose boards' and pick multiple. You can aggregate data across departments.
+
+**Pro tip:** Create two versions:
+• High-level dashboard for executives (5 widgets max)
+• Detailed dashboard for managers (10+ widgets)
+
+Executives want the story, not the data. Keep it simple.15:T42e,I've helped 20+ teams navigate this exact decision. Option A (hybrid) wins almost every time.
+
+**Why not all-in on monday.com:**
+monday.com Docs exist but they're nowhere near Notion's quality. You'd lose your wiki, meeting notes, and knowledge base experience.
+
+**Why not stay all-in Notion:**
+Notion's project management is a glorified spreadsheet. No real automations, no proper resource management, no client portals.
+
+**The winning hybrid setup:**
+• Notion: Company wiki, meeting notes, documentation, specs, onboarding
+• monday.com: Project tracking, client work, automations, dashboards, time tracking
+
+**How to connect them:**
+1. Use the monday.com Notion integration — embed Notion pages in monday.com items
+2. Link monday.com board URLs in Notion project pages
+3. Use Zapier/Make for cross-platform automations
+
+**The key rule:** Each piece of information lives in ONE place. Don't duplicate.
+
+For your GitHub integration need specifically, monday.com is far superior. The native GitHub integration syncs PRs, commits, and issues directly to board items.16:T44f,Migrated our 8-person team from Trello 6 months ago. Here's the honest experience:
+
+**Migration process:**
+1. monday.com has a built-in Trello importer — one-click migration per board
+2. Cards become items, lists become groups, labels become status columns
+3. Comments and attachments migrate too
+4. Takes about 5 minutes per board
+
+**The adjustment period:**
+First week was rough. monday.com looks different and has more options. Some team members missed Trello's simplicity.
+
+By week 3, everyone preferred monday.com. The 'aha moment' was automations — things that required Trello power-ups (paid) work natively in monday.com.
+
+**For kanban lovers:**
+monday.com's Kanban view is excellent. Actually better than Trello because you can customize card fields, add swimlanes, and filter without power-ups.
+
+**Is it overkill?**
+Only if you don't use the extra features. Start with just the kanban view and add features gradually. Don't try to set up everything on day one.
+
+For a design team specifically: the file column, creative review workflows, and integration with Figma make it worth the switch.17:T4bf,Moved my 18-person engineering team from Jira to monday.com. It's been 10 months.
+
+**What works:**
+• Sprint planning — create sprint groups, add story point columns, track velocity with dashboard widgets
+• Bug tracking — custom status flows per board, priority columns, automated assignment
+• Stakeholder visibility — product, design, and execs actually use it now. That alone was worth the switch.
+• GitHub integration — PRs and commits link to items automatically
+
+**What we miss from Jira:**
+• JQL (Jira Query Language) — nothing in monday.com matches the power of complex JQL queries
+• Native sprint reports (burndown charts etc.) — we build these in dashboards but they're not as polished
+• Confluence integration depth
+
+**The real impact:**
+Before: Jira was the 'developer tool' nobody else touched. Now the entire company is on one platform.
+
+Cross-team visibility went from zero to complete. Product can see engineering status without asking. Designers link mockups directly to sprint items.
+
+**My advice:** If your team is 50+ devs doing SAFe/complex agile, stay on Jira. If you're 15-30 and value cross-team collaboration over developer-specific features, monday.com is the move.18:T4d1,Been building on the monday.com API for 3 years. Here's the crash course:
+
+**Authentication:**
+Go to Admin > API. Generate a personal token or use OAuth for apps. Include it as: Authorization: your_token_here
+
+**Basic query structure:**
+It's GraphQL, so you request exactly what you need. Start with the API playground (monday.com/developers) — it has autocomplete and documentation.
+
+**Complexity budget tips:**
+• You get 10,000,000 complexity points per minute
+• Querying all items on a large board eats budget fast
+• Use pagination: items_page(limit: 25) instead of fetching everything
+• Cache responses where possible
+• Use column_values(ids: ["status", "date"]) instead of fetching all columns
+
+**Column values gotcha:**
+The column_values.value field is a JSON string. You need to parse it. Each column type has a different JSON structure. The documentation for each column type is your best friend.
+
+**Webhooks:**
+Use the create_webhook mutation. You'll need a publicly accessible endpoint. monday.com sends POST requests when items change. Verify with the challenge token on first setup.
+
+**Rate limiting strategy:** Batch your mutations using the complexity_query to check remaining budget before bulk operations.19:T4ed,Great question. Here's my decision framework after building both:
+
+**Use built-in automations + Zapier/Make when:**
+• The workflow is simple (trigger → action)
+• You need it working in hours, not days
+• Non-developers need to modify it
+• The integration already exists in the marketplace
+• Volume is low (< 1000 triggers/month)
+
+**Use custom webhooks when:**
+• You need complex logic (conditions, loops, data transformation)
+• High volume (1000+ triggers/month) — Zapier gets expensive
+• You need guaranteed delivery and retry logic
+• Data needs to flow to internal systems behind firewalls
+• You want full control over error handling
+
+**For your specific cases:**
+• Deal → Project: Webhook. You probably need data transformation.
+• Urgent → PagerDuty: Built-in automation with PagerDuty integration (it exists!)
+• Data sync: Webhook + database. Too complex for Zapier.
+• PDF generation: Webhook. Need custom logic for PDF creation.
+
+**Reliability notes:**
+• monday.com webhooks are reliable but have no built-in retry
+• Zapier has retry logic but adds latency (30-60 second delay)
+• Custom = you control everything but own the infrastructure
+
+My rule: Start with automations. Move to webhooks when you hit limitations.1a:T4df,I manage guest access for a 200-person org with 50+ external guests. Here's the complete guide:
+
+**Guest user basics:**
+• Guests DON'T count toward seat limits (huge cost saver)
+• You can invite unlimited viewers on Pro/Enterprise plans
+• Guests can be 'viewers' or 'members' of specific boards
+• They only see boards they're explicitly invited to
+
+**Hiding columns from guests:**
+• Use column permissions (Enterprise feature) to restrict visibility
+• On lower plans, create a separate 'Client View' board that mirrors only the columns you want shared
+• Use the 'Shareable Board' type — designed for external sharing
+
+**Dashboard access:**
+• Guests CAN access dashboards if given permission
+• Create client-specific dashboards showing only their boards
+• The 'View Only' permission prevents any modifications
+
+**Best structure for agencies:**
+1. Internal board: Full project details, costs, team notes
+2. Client board: Milestones, status, files (Connected/Mirrored from internal)
+3. Automate: When internal status changes, mirror to client board
+
+**Security tips:**
+• Enable 2FA for all accounts
+• Review guest access quarterly
+• Use the Activity Log to monitor guest actions
+• Never put pricing data on shared boards1b:T4cf,Critical topic that most monday.com admins overlook. Here's the full picture:
+
+**monday.com's built-in protections:**
+• Deleted items go to a 30-day Recycle Bin (then permanently deleted)
+• Deleted boards can be recovered within 30 days
+• Activity logs are retained for 6 months (Pro) or unlimited (Enterprise)
+• monday.com has their own server backups (99.9% SLA)
+
+**Export options:**
+• Board export: Excel/CSV (includes column data, excludes files)
+• Account-level export: Admin > Export (all boards, takes time for large accounts)
+• API export: Most comprehensive — query everything including files, updates, activity logs
+
+**Third-party backup solutions:**
+• Rewind.io — automated daily backups, one-click restore
+• CData — sync to your own database for full control
+• Custom: Use the API + cloud storage (S3/GCS) for DIY backups
+
+**My recommended strategy:**
+1. Weekly automated export via API to cloud storage
+2. Rewind.io for quick restore capability
+3. Monthly full account export stored offline
+4. Document your monday.com structure so you could rebuild if needed
+
+**File attachments:** These are NOT included in standard exports. Use the API to download them separately. This is the biggest gap.1c:T525,We run a $40M/year GC operation on monday.com. Here's our honest experience:
+
+**What monday.com handles well:**
+• Project milestones and high-level timelines (Timeline view)
+• Subcontractor management (dedicated board with compliance tracking)
+• Change order tracking (form intake → approval workflow)
+• Office ↔ field communication (mobile app is good enough)
+• Budget tracking (formula columns for committed/actual/variance)
+
+**What needs workarounds:**
+• RFIs: We built a custom RFI board with auto-numbering via automations
+• Daily logs: Mobile form submission works but isn't as smooth as Procore
+• Document management: monday.com's file storage is basic. We use Google Drive + links.
+• Punch lists: Works great as a board with mobile photo upload
+
+**vs Procore/BuilderTrend:**
+Procore is purpose-built for construction. If you have $30K+/year budget and want every construction-specific feature, go Procore.
+
+monday.com advantage: Flexibility. We customized boards for our exact workflow. Procore forces you into their workflow.
+
+**Cost comparison:**
+• monday.com Pro: ~$500/month for 33 users
+• Procore: ~$2,500/month (construction software tax)
+
+We chose monday.com because it's 80% of Procore at 20% of the price. The 20% gap is mostly in drawing management and detailed scheduling.1d:T568,Set up monday.com for 15+ real estate teams. Here's the template I recommend:
+
+**Board 1: Deal Pipeline**
+• Groups: Lead, Active Showing, Offer Submitted, Under Contract, Closed, Lost
+• Columns: Property Address, Client Name, Price, Commission %, Agent, Close Date, Status
+• Formula: Commission Amount = Price × Commission %
+• Automation: When status changes to 'Under Contract,' create Transaction Checklist items
+
+**Board 2: Transaction Checklists**
+• Connected to Deal Pipeline via Connect Boards
+• Items: Home Inspection, Appraisal, Title Search, Survey, Final Walk-Through, Closing
+• Each item has Due Date, Status, Responsible Party, Notes
+• Automation: Deadline reminders 3 days before each milestone
+
+**Board 3: Client CRM**
+• All contacts with communication log (Updates section)
+• Connected to Deal Pipeline
+• Tags: Buyer, Seller, Investor, Referral Source
+
+**Dashboard: Agent Performance**
+• Deals per agent, Total volume, Average days to close, Commission earned
+
+**What it replaces:**
+• Spreadsheets ✓ (Deal Pipeline)
+• Basic CRM ✓ (Client board)
+• Transaction management ✓ (Checklists)
+
+**What you still need separately:**
+• Calendly (or use monday.com forms for showing requests)
+• Mailchimp (monday.com's email capabilities aren't sufficient for drip campaigns)
+
+ROI: My clients save 10-15 hours/week in admin time after setup.1e:T525,Built and refined our onboarding system over 18 months. Here's what works:
+
+**The magic automation:**
+When a new hire is added to the 'New Employees' board, automatically:
+1. Create 25+ checklist items across 3 boards (IT, HR, Manager)
+2. Set due dates relative to start date
+3. Assign tasks to relevant people (IT director, hiring manager, HR)
+4. Send welcome email to new hire
+5. Create Slack notification in #new-hires
+
+All of this happens with ONE action: adding the new hire.
+
+**Board structure:**
+• Board 1: New Hire Tracker (master view - one item per hire)
+• Board 2: IT Setup Tasks (equipment, accounts, access)
+• Board 3: HR Tasks (paperwork, benefits, compliance)
+• Board 4: Manager Tasks (training plan, introductions, check-ins)
+
+**30/60/90 tracking:**
+Subitems on the New Hire Tracker:
+• 30 days: Complete training modules, meet all team members, first project assigned
+• 60 days: Independent work begins, first performance check-in
+• 90 days: Full productivity, formal review
+
+Each milestone has automations for manager reminders.
+
+**Skip the HR template — build custom.** The template is too generic. Every company's onboarding is different.
+
+**Result:** Onboarding went from 'chaotic' to 'delightful.' New hires consistently say it's the most organized onboarding they've experienced.1f:T5d7,I've set this up for 10+ dev teams. Here's the battle-tested structure:
+
+**Board 1: Product Backlog**
+• Groups: Icebox, Backlog, Ready for Sprint, In Sprint
+• Columns: Title, Type (Feature/Bug/Tech Debt), Priority (P0-P3), Story Points, Epic, Requester
+• Keep this as the single source of truth for all work
+• Product manager owns prioritization
+
+**Board 2: Sprint Board (one per active sprint)**
+• Groups: To Do, In Progress, Code Review, QA, Done
+• Mirror key columns from Backlog
+• Add: Assignee, Branch Name, PR Link, Sprint Goal
+• Automation: When all sprint items are Done, notify #engineering
+
+**Board 3: Release Tracker**
+• Items = releases (v1.2, v1.3, etc.)
+• Connected to Sprint Board items
+• Status: Planning → Development → QA → Staging → Production
+• Release notes column
+
+**GitHub Integration:**
+• Install the GitHub app from monday.com marketplace
+• Link repos to boards
+• PRs automatically appear on items when branch names match
+• Commit messages referencing item IDs update the item
+
+**Velocity Dashboard:**
+• Chart widget: Story points completed per sprint (line chart)
+• Numbers widget: Current sprint burndown
+• Battery widget: Sprint completion %
+
+**Sprint ceremony automation:**
+• Sprint start: Auto-move 'Ready for Sprint' items to new Sprint Board
+• Sprint end: Auto-move incomplete items back to Backlog with 'Carried Over' tag
+
+The key to avoiding chaos: Keep boards focused. Don't try to put everything on one board.20:T4e2,I've led enterprise rollouts of both platforms. Here's my experience:
+
+**Wrike advantages at enterprise scale:**
+• More granular permissions and folder structures
+• Better resource management (capacity planning across projects)
+• Stronger reporting engine (custom report builder)
+• More mature API with better documentation
+• Proofing/approval workflows for creative teams
+
+**monday.com advantages at enterprise scale:**
+• 3x faster adoption rate (UX matters enormously at 200 people)
+• More flexible board structures
+• Better marketplace/ecosystem
+• Superior automation builder
+• Dashboards that non-technical users actually understand
+
+**The adoption factor is HUGE.**
+I've seen Wrike deployments fail because 40% of users never logged in after training. monday.com's intuitive interface means higher adoption, which means better data, which means better decisions.
+
+**For 200 people:**
+monday.com Enterprise gives you SSO, audit logs, advanced permissions, and dedicated support. It's genuinely enterprise-ready now — that wasn't true 2 years ago.
+
+**My recommendation:** Choose monday.com unless you have complex resource management needs that require Wrike's capacity planning features. Adoption trumps features every time.21:T579,Former Excel power user who's used both extensively:
+
+**If your team thinks in spreadsheets: Smartsheet wins on familiarity.**
+The interface IS a spreadsheet. Your team will feel at home immediately. Formulas work similarly to Excel. Cell references, cross-sheet formulas, and data manipulation are native.
+
+**If your team needs more than spreadsheets: monday.com wins on versatility.**
+monday.com's strength is transforming data into visual workflows. The same data can be viewed as a table, kanban, timeline, chart, or dashboard — instantly.
+
+**Head-to-head comparison:**
+• Formulas: Smartsheet ✓ (more Excel-like)
+• Conditional formatting: Both good, different approaches
+• Data rollups: Smartsheet's sheet summaries vs monday.com's dashboard widgets
+• Gantt: Smartsheet ✓ (more traditional, better dependencies)
+• Cross-references: Both support it, Smartsheet is more intuitive
+• Excel import: Both support it, Smartsheet preserves more formatting
+• Automation: monday.com ✓ (far superior)
+• Visual appeal: monday.com ✓ (night and day difference)
+
+**For manufacturing ops specifically:**
+Smartsheet if you need detailed scheduling and formula-heavy tracking. monday.com if you need team collaboration, automations, and visual reporting.
+
+Many manufacturing teams use both: Smartsheet for detailed operational data, monday.com for project management and team coordination.22:T604,Here are our top 5 time-saving workflows:
+
+**1. The Cascade Automation (saves ~3 hours/week)**
+When a project status changes to 'Approved,' automatically:
+• Create 12 task items from a template board
+• Set due dates relative to project start date
+• Assign team members based on project type
+• Notify the team in Slack
+• Create a client-facing board with mirrored data
+
+**2. The Escalation Chain (saves ~2 hours/week)**
+• Item overdue by 1 day → notify assignee
+• Overdue by 3 days → notify manager + change priority to High
+• Overdue by 7 days → notify director + move to 'Escalated' group
+No more manually chasing overdue items.
+
+**3. Smart Intake Routing (saves ~2 hours/week)**
+Form submission → automation checks Project Type:
+• Website → Board A, assign Team 1
+• Marketing → Board B, assign Team 2
+• Support → Board C, assign on-call rotation
+Zero manual triage.
+
+**4. Auto-Generated Reports (saves ~2 hours/week)**
+• Monday morning: Dashboard PDF auto-sent to leadership
+• Friday afternoon: Weekly summary posted to Slack
+• Month-end: Auto-calculate metrics and update reporting board
+
+**5. The Data Bridge (saves ~1 hour/week)**
+Mirror columns connecting Sales → Projects → Finance
+• When deal closes, project board auto-populates budget
+• When project completes, finance board gets final costs
+• Zero double entry across departments
+
+**Scaling tip:** Use workspace templates. When onboarding a new client, duplicate the template workspace and all boards/automations are pre-built.23:T53d,I have 2 apps on the monday.com marketplace. Here's the real experience:
+
+**Developer experience: 7/10**
+• Documentation is good but has gaps (especially for complex features)
+• The monday-sdk-js is essential and well-maintained
+• React is the recommended frontend framework
+• Tunneling for local development works well
+• Support is responsive but slow for edge cases
+
+**App review process:**
+• Submit app → Initial review (1-2 weeks)
+• Security review → Functionality review → UX review
+• Can take 4-8 weeks total for first submission
+• Updates are faster (1-2 weeks)
+• They're strict about UX guidelines — plan for revisions
+
+**Revenue model:**
+• You set your own pricing
+• monday.com takes 20% marketplace commission
+• You handle billing through monday.com's system
+• Payouts are monthly
+
+**Realistic user expectations:**
+• Niche app: 50-200 installs in first year
+• Good category app: 500-2000 installs
+• Top apps: 10,000+ installs
+• Conversion from free to paid: ~5-10%
+
+**Tech stack:**
+• React + TypeScript for frontend
+• Node.js for backend (or serverless — Lambda/Cloud Functions)
+• monday.com SDK for platform integration
+• OAuth 2.0 for authentication
+
+**Gotcha:** The app runs inside an iframe in monday.com. Cross-origin limitations apply. Plan your architecture accordingly.24:T5ba,Evaluated monday.com Enterprise for our regulated industry (healthcare). Here's the security breakdown:
+
+**Certifications:**
+• SOC 2 Type II ✓
+• ISO 27001 ✓
+• ISO 27018 ✓
+• GDPR compliant ✓
+• HIPAA compliant (Enterprise plan with BAA) ✓
+
+**Authentication & Access:**
+• SAML 2.0 SSO ✓ (Okta, Azure AD, OneLogin, etc.)
+• SCIM provisioning ✓ (auto-add/remove users)
+• 2FA enforcement ✓
+• Session management (timeout settings) ✓
+• IP address restrictions ✓ (Enterprise only)
+• Password policies ✓
+
+**Data Security:**
+• AES-256 encryption at rest ✓
+• TLS 1.2+ in transit ✓
+• AWS infrastructure (SOC certified data centers) ✓
+• Data residency: US and EU options ✓
+• No data shared with third parties for advertising ✓
+
+**Audit & Monitoring:**
+• Comprehensive audit logs ✓ (who did what, when)
+• Login activity tracking ✓
+• API access logging ✓
+• Data export audit trails ✓
+
+**Concerns for financial services:**
+• No on-premise deployment option (cloud-only)
+• File storage limits may require external DMS
+• Custom data retention policies need Enterprise plan
+• Some integrations (Zapier, Make) send data through third-party servers
+
+**Recommendation:** monday.com Enterprise meets most enterprise security requirements. Request their SOC 2 report directly — they'll share it under NDA. For financial services, ensure you configure IP restrictions and session timeouts appropriately.9:["$","$1","c",{"children":[["$","div",null,{"className":"max-w-[860px] mx-auto","children":[["$","section",null,{"className":"pt-14 pb-10 text-center","children":[["$","div",null,{"className":"inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-red-500/10 text-red-500 text-xs font-semibold rounded-full mb-5 uppercase tracking-wider border border-red-500/15","children":"Community Forum"}],["$","h1",null,{"className":"text-4xl md:text-5xl font-extrabold tracking-tighter leading-[1.1] mb-4","children":["Real answers for"," ",["$","span",null,{"className":"bg-gradient-to-br from-red-500 via-orange-400 to-red-500 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-shift","children":"monday.com"}]]}],["$","p",null,{"className":"text-slate-500 dark:text-slate-400 text-[17px] leading-relaxed max-w-[520px] mx-auto","children":"The community for monday.com power users. Get honest answers, share workflows, and level up your productivity."}]]}],["$","div",null,{"className":"flex justify-center gap-10 py-6 mb-2","children":[["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"text-2xl font-bold tracking-tight","children":28}],["$","div",null,{"className":"text-xs text-slate-400 dark:text-slate-500 uppercase tracking-widest font-medium mt-0.5","children":"Discussions"}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"text-2xl font-bold tracking-tight","children":56}],["$","div",null,{"className":"text-xs text-slate-400 dark:text-slate-500 uppercase tracking-widest font-medium mt-0.5","children":"Answers"}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"text-2xl font-bold tracking-tight","children":"57.4k"}],["$","div",null,{"className":"text-xs text-slate-400 dark:text-slate-500 uppercase tracking-widest font-medium mt-0.5","children":"Views"}]]}]]}],["$","div",null,{"className":"relative my-8 p-8 bg-gradient-to-br from-slate-100 to-white dark:from-slate-900 dark:to-slate-950 rounded-2xl border border-slate-200 dark:border-white/[0.06] overflow-hidden flex flex-col md:flex-row items-center gap-8","children":[["$","div",null,{"className":"absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 via-orange-400 to-red-500 bg-[length:200%_100%] animate-gradient-slide"}],["$","div",null,{"className":"flex-1","children":[["$","div",null,{"className":"text-[11px] font-bold uppercase tracking-[0.1em] text-red-500 mb-2","children":"monday.com optimization"}],["$","div",null,{"className":"text-xl font-bold tracking-tight mb-1.5 leading-snug","children":"Stop troubleshooting. Start scaling."}],["$","p",null,{"className":"text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-[420px]","children":"Born & Brand helps teams unlock the full power of monday.com — custom automations, integrations, and workflows that actually work."}]]}],["$","div",null,{"className":"flex flex-col gap-2 shrink-0 items-center","children":[["$","a",null,{"href":"https://bornandbrand.com","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center justify-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold text-sm rounded-lg transition-all hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] hover:-translate-y-0.5 whitespace-nowrap","children":["Get a Free Audit",["$","svg",null,{"className":"w-4 h-4","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":"2.5","strokeLinecap":"round","strokeLinejoin":"round","children":[["$","line",null,{"x1":"5","y1":"12","x2":"19","y2":"12"}],["$","polyline",null,{"points":"12 5 19 12 12 19"}]]}]]}],["$","span",null,{"className":"text-[11px] text-slate-400 dark:text-slate-500 text-center","children":"Trusted by 100+ teams"}]]}]]}],["$","div",null,{"id":"discussions","children":["$","$Lc",null,{"threads":[{"id":"monday-vs-asana","title":"monday.com vs Asana: Which is better for project management?","category":"Comparison","tags":["comparison","asana","project-management","tools"],"author":"sarah.kowalski","timestamp":"2 days ago","votes":47,"views":2847,"excerpt":"My team is deciding between monday.com and Asana. We need something visual but also powerful for complex workflows. What are the main differences?","question":"Hi everyone! My team of 15 is currently evaluating project management tools and we've narrowed it down to monday.com vs Asana. We're a marketing agency that handles multiple client projects simultaneously.\n\nI love how visual monday.com looks with its boards, but Asana seems to have better task dependencies. We're looking for:\n\n• Visual project tracking\n• Good automation capabilities\n• Time tracking\n• Client collaboration features\n• Integration with Slack and Google Workspace\n\nFor those who've used both, what are the key differences? Is monday.com worth the higher price point?","answers":[{"author":"pmwizard_dan","timestamp":"1 day ago","votes":32,"isAccepted":true,"content":"I've used both extensively and here's my take:\n\nmonday.com shines when you need visual project management. The color-coded boards make it incredibly easy to see project status at a glance. The automation recipes are also more intuitive — you can build complex workflows without coding.\n\nAsana is better for traditional task management with excellent dependency tracking. If your projects are heavily sequential (task B can't start until task A is done), Asana's timeline view is superior.\n\nFor a marketing agency, I'd lean toward monday.com. The client portal feature is a game-changer — you can share specific boards with clients without them seeing your internal processes. The dashboard widgets are also more customizable for client reporting.\n\nPrice-wise, monday.com starts at $8/seat vs Asana's $10.99, but monday.com's Pro plan ($16) unlocks features that Asana charges more for."},{"author":"mike-caldwell","timestamp":"20 hours ago","votes":18,"isAccepted":false,"content":"Former Asana user, current monday.com power user here. The switch was worth it for one reason: automations.\n\nWe reduced our manual status updates by 80% using monday.com's automation recipes. Things like 'When status changes to Done, notify Slack channel and move to Completed board' happen automatically.\n\nThe downside? monday.com has a steeper learning curve. My team took about 2 weeks to get comfortable vs 3 days with Asana.\n\nIf you're doing creative work with lots of back-and-forth and revisions, monday.com's file versioning and approval workflows are killer features that Asana lacks."}]},{"id":"monday-pricing-worth-it","title":"Is monday.com pricing worth it for small teams?","category":"Pricing","tags":["pricing","small-business","budget","roi"],"author":"jen_builds_things","timestamp":"3 days ago","votes":38,"views":1923,"excerpt":"Looking at monday.com pricing and it seems expensive for our 8-person team. The Basic plan lacks features we need. Is the Standard plan worth $10/seat?","question":"We're a startup with 8 employees and currently using Trello (free tier). We're hitting limitations and looking at monday.com, but the pricing is making me hesitate.\n\nThe Basic plan at $8/seat doesn't include automations or integrations, which are the main reasons we're considering the switch. The Standard plan at $10/seat adds those but we're looking at $80/month minimum.\n\nFor small teams who made the jump — is it worth it? Did you see measurable productivity gains that justified the cost? Any tips for getting the most value?","answers":[{"author":"alexnguyen42","timestamp":"2 days ago","votes":24,"isAccepted":true,"content":"I ran the numbers for my 6-person team and here's what I found:\n\nBefore monday.com: 4 hours/week per person on status meetings and email updates = 24 hours/week total\nAfter monday.com: 1 hour/week per person = 6 hours/week total\n\nTime saved: 18 hours/week. At $50/hour average rate, that's $900/week in recovered productivity.\n\nWe pay $60/month for monday.com Standard. The ROI is absolutely there, but only if you actually use the features.\n\nMy advice: Start with Standard (not Basic). The integrations and automations are where the value is. The timeline/Gantt view alone saved us from buying a separate $30/month project planning tool.\n\nAlso, look for their startup program — we got 50% off for the first year by applying."},{"author":"thriftytina","timestamp":"1 day ago","votes":15,"isAccepted":false,"content":"Worth it, but with caveats.\n\nThe key is committing to actually building workflows, not just using it as a fancy to-do list. If you're just moving cards around like Trello, you're wasting money.\n\nWhere monday.com pays for itself:\n• Automated client updates (no more 'hey, what's the status?' emails)\n• Time tracking built-in (no more Harvest subscription)\n• Forms for intake (replaced our Typeform $35/month)\n\nWe consolidated 3 tools into monday.com, so net-net we're saving money while getting better features.\n\nPro tip: Start with annual billing for the discount, but only after you've done a thorough 14-day trial with real projects."}]},{"id":"monday-automation-guide","title":"Complete guide to monday.com automations for beginners","category":"Tutorial","tags":["automation","tutorial","workflows","beginners"],"author":"emily_r_2024","timestamp":"5 days ago","votes":56,"views":3421,"excerpt":"Just upgraded to Standard plan for automations but feeling overwhelmed. Can someone explain the most useful automation recipes for a beginner?","question":"Hey everyone! I just upgraded from Basic to Standard specifically for automations, but I'm staring at the automation center feeling completely overwhelmed. There are so many options!\n\nI manage a content calendar and editorial workflow. Can someone recommend the most useful automations for:\n\n1. Moving items between boards when status changes\n2. Notifying team members of deadlines\n3. Auto-assigning tasks based on category\n4. Creating recurring tasks\n\nAlso, what's the difference between 'automation recipes' and 'custom automations'? When should I use each?\n\nAny beginner-friendly resources would be greatly appreciated!","answers":[{"author":"ben.marshall","timestamp":"4 days ago","votes":41,"isAccepted":true,"content":"$d"},{"author":"rachelwrites","timestamp":"3 days ago","votes":22,"isAccepted":false,"content":"For content calendars specifically, here are my must-haves:\n\n1. **Cross-board mirroring:** When a blog post status changes to 'Published,' automatically create a social media task in your Social board.\n\n2. **Recurring content:** Use 'Every time period, create an item' for weekly newsletters or monthly reports.\n\n3. **Dependency chains:** Set up 'When this date changes, change another date' to keep your editorial calendar flowing. If the draft deadline slips, all subsequent dates (review, publish, promote) shift automatically.\n\n4. **Slack integration:** 'When status changes to Blocked, send Slack message to #content-team' — prevents things from falling through cracks.\n\nOne gotcha: Automations don't work retroactively. They only trigger on changes made after the automation is active. Plan your migration accordingly."}]},{"id":"monday-crm-features","title":"How good is monday.com as a CRM? Honest review","category":"CRM","tags":["crm","sales","features","review"],"author":"tom_sales_42","timestamp":"1 week ago","votes":43,"views":2156,"excerpt":"Considering switching from HubSpot to monday.com CRM. We need deal tracking, email integration, and reporting. How does it compare?","question":"Currently using HubSpot CRM (free tier) but we're outgrowing it. Looking at monday.com's CRM template and it looks promising, but I have concerns.\n\nOur needs:\n• Pipeline management with custom stages\n• Email tracking and templates\n• Contact/deal association\n• Sales forecasting and reporting\n• Integration with Gmail\n\nFor those using monday.com as a CRM — what's working? What's frustrating? How does it compare to dedicated CRMs like HubSpot or Pipedrive?\n\nSpecifically wondering about:\n1. Email integration quality\n2. Mobile app for sales reps\n3. Reporting capabilities\n4. Contact import/management","answers":[{"author":"danielrcrm","timestamp":"6 days ago","votes":29,"isAccepted":true,"content":"I implement CRMs for a living and here's my honest take on monday.com as a CRM:\n\n**The Good:**\n• Visual pipelines are unmatched — much better than HubSpot's list view\n• Customization is incredible. Want 15 custom fields? No problem.\n• Automation between sales and operations is seamless since it's all one platform\n• The 'Connect Boards' feature lets you link deals to projects post-sale\n\n**The Frustrating:**\n• Email integration is weaker than HubSpot. No email tracking opens/clicks natively (need a third-party app)\n• Contact management is clunkier — no automatic company/contact association like HubSpot\n• Mobile app is fine for viewing, not great for data entry\n\n**Verdict:** If you need heavy email automation and marketing features, stick with HubSpot. If you want visual deal tracking and your sales process is complex/custom, monday.com wins.\n\nMany of my clients use monday.com for pipeline/operations and keep HubSpot (free) just for email marketing."},{"author":"lisamartinez_ops","timestamp":"5 days ago","votes":19,"isAccepted":false,"content":"Switched from Pipedrive to monday.com CRM 8 months ago. Here's the real talk:\n\n**What improved:**\n• Forecasting accuracy went up 30% because we could build custom weighted probability models\n• Sales-to-ops handoff is instant — no more 'did you update the project board?'\n• Dashboards are infinitely more flexible than Pipedrive\n\n**What we miss:**\n• Email open tracking (we added Mailtrack to compensate)\n• Automatic contact enrichment (Clearbit integration helps)\n• Built-in calling\n\n**The killer feature:** Mirror columns. We mirror deal values into our project boards, so when a deal closes, project budgets auto-populate. No double data entry.\n\nFor a 12-person sales team, we're happy with the switch. But if you're 50+ people with complex sales hierarchies, you might outgrow it."}]},{"id":"monday-templates-best","title":"Best monday.com templates for marketing teams?","category":"Templates","tags":["templates","marketing","best-practices","setup"],"author":"lisachang_mktg","timestamp":"4 days ago","votes":34,"views":1876,"excerpt":"Just signed up for monday.com and overwhelmed by template options. Which templates are actually useful for marketing teams vs just flashy demos?","question":"Hello! I'm setting up monday.com for our 10-person marketing team. The template gallery has hundreds of options and I'm paralyzed by choice.\n\nWe handle:\n• Content marketing (blog, ebooks, whitepapers)\n• Social media management\n• Campaign planning and tracking\n• Event marketing\n• Creative requests from other departments\n\nWhich templates should I actually use? Which ones look good but are impractical?\n\nAlso, should I use separate boards for each function or try to combine everything? Any advice on structure would be amazing!","answers":[{"author":"natalie.j","timestamp":"3 days ago","votes":27,"isAccepted":true,"content":"$e"},{"author":"chrisryan88","timestamp":"2 days ago","votes":14,"isAccepted":false,"content":"Don't sleep on the Campaign Planning template with the ROI dashboard. We customized it to track:\n\n• Spend vs Budget\n• Leads generated\n• Cost per lead\n• Pipeline influence\n\nThe dashboard widgets make it easy to show leadership real-time campaign performance without building reports.\n\nFor creative requests, I recommend building a custom intake form rather than using the template. The template has too many fields. We simplified to:\n1. Requester name (auto-filled)\n2. Asset type (dropdown)\n3. Due date\n4. Brief description\n5. Attachments\n\nTakes 30 seconds to submit, and our creative team gets everything they need.\n\nOne more tip: Use the Event Planning template for webinars. It's surprisingly well-structured for virtual events."}]},{"id":"monday-time-tracking","title":"How to use monday.com time tracking effectively?","category":"Features","tags":["time-tracking","productivity","reporting","tips"],"author":"jakefromstatefarm","timestamp":"6 days ago","votes":28,"views":1543,"excerpt":"Trying to use monday.com's built-in time tracking for client billing but finding it clunky. Any best practices or workarounds?","question":"I'm a freelancer managing multiple client projects in monday.com. I started using the time tracking column but I'm struggling with a few things:\n\n1. Can I track time against specific subtasks, not just the main item?\n2. How do I generate client-ready time reports?\n3. Is there a way to set hourly rates and calculate billable amounts?\n4. Can I export time data to Excel/CSV?\n\nAlso, the timer interface feels small and easy to forget about. Anyone found good habits or integrations to make time tracking more reliable?\n\nConsidering switching to Toggl or Clockify integration if native tracking isn't robust enough.","answers":[{"author":"productivity_guru","timestamp":"5 days ago","votes":21,"isAccepted":true,"content":"$f"},{"author":"heather.watts","timestamp":"4 days ago","votes":12,"isAccepted":false,"content":"I bill 40+ hours/week through monday.com. Here's my setup:\n\n**Board structure:**\n• Each client has their own board (or group if small)\n• Items are deliverables, not tasks\n• Time tracking + Formula column (Hours × Rate) + 'Invoiced?' status\n\n**The game-changer:**\nUse the 'Timesheet' view (Pro plan feature). It shows all your time entries in a weekly calendar view. Super easy to spot missing entries or overages.\n\n**Forgetting to track:**\nI set up Slack reminders every 2 hours: 'What are you working on?' I reply with the monday.com item name, and I have a Zapier automation that starts the timer.\n\n**Alternative:** Clockify integration is free and much more robust for billing. I use it for complex projects and sync summary data back to monday.com for client visibility.\n\nBottom line: Native tracking is fine for visibility, but for serious billing, integrate with a dedicated time tool."}]},{"id":"monday-vs-clickup","title":"monday.com vs ClickUp: Which should I choose?","category":"Comparison","tags":["comparison","clickup","project-management","decision"],"author":"alex.petrov","timestamp":"1 week ago","votes":52,"views":3102,"excerpt":"Evaluating monday.com vs ClickUp for our 20-person product team. ClickUp seems to have more features for less money. What am I missing?","question":"I'm evaluating project management tools for our product team and I'm stuck between monday.com and ClickUp. On paper, ClickUp seems like the obvious choice:\n\n• More features (docs, whiteboards, email built-in)\n• Lower price ($7 vs $8 per seat)\n• More customizable\n\nBut monday.com seems more polished and easier to adopt. My team isn't super technical, so ease of use matters.\n\nHas anyone compared both recently? What are the real differences in day-to-day use?\n\nOur needs:\n• Sprint planning and backlog management\n• Roadmap visualization\n• Integration with GitHub\n• Time tracking\n• Good mobile experience","answers":[{"author":"samhughes_pm","timestamp":"6 days ago","votes":38,"isAccepted":true,"content":"$10"},{"author":"mondayfan99","timestamp":"5 days ago","votes":19,"isAccepted":false,"content":"The unspoken difference: ClickUp tries to be everything, monday.com focuses on being excellent at work management.\n\nClickUp's 'everything' approach means:\n• Constant feature announcements (exciting but distracting)\n• More bugs and breaking changes\n• Overwhelming options for simple tasks\n\nmonday.com's focused approach means:\n• Predictable releases\n• Polished core features\n• Clearer learning path\n\nFor GitHub integration specifically: monday.com's is more reliable. ClickUp's sync breaks occasionally.\n\nOne more factor: Support. monday.com has better customer success resources. ClickUp's support is overwhelmed.\n\nIf price is the main concern, ClickUp wins. If you value stability and ease of adoption, monday.com is worth the premium."}]},{"id":"monday-gantt-chart","title":"How to create effective Gantt charts in monday.com?","category":"Tutorial","tags":["gantt","timeline","project-planning","visualization"],"author":"david_k_builds","timestamp":"3 days ago","votes":31,"views":1689,"excerpt":"Need to create project timelines with dependencies. The Gantt view seems limited compared to MS Project. What are the best practices?","question":"I'm managing a construction project with 50+ tasks and complex dependencies. I need Gantt charts with:\n\n• Task dependencies (FS, SS, FF relationships)\n• Critical path visualization\n• Resource allocation\n• Baseline vs actual comparison\n\nThe monday.com Gantt view seems basic compared to MS Project. Am I missing features, or is this a limitation?\n\nAny tips for making Gantt charts work in monday.com? Should I be using the Timeline view instead? Or integrate with a dedicated tool?","answers":[{"author":"greg.oconnor","timestamp":"2 days ago","votes":23,"isAccepted":true,"content":"$11"},{"author":"meganflows","timestamp":"1 day ago","votes":11,"isAccepted":false,"content":"Don't overlook the Timeline view — it's often better than Gantt for most use cases.\n\nTimeline view advantages:\n• Easier to read at a glance\n• Better for presenting to stakeholders\n• Swimlane view by person/team\n\nGantt view advantages:\n• Dependency lines are clearer\n• Better for complex project structures\n\n**Pro setup for dependencies:**\nUse the 'Dependency' column type (not just connecting items). It enables:\n• Automatic date shifting when predecessors change\n• Lag time configuration (e.g., 'start 2 days after')\n• Dependency chain visualization\n\n**For resource management:**\nThe Workload view is game-changing. You can see capacity across all your projects and spot overallocation instantly.\n\nIf you absolutely need MS Project-level features, consider the Project.co integration. It syncs bidirectionally."}]},{"id":"monday-slack-integration","title":"Best practices for monday.com Slack integration?","category":"Integrations","tags":["slack","integration","notifications","workflow"],"author":"kara_remote","timestamp":"5 days ago","votes":26,"views":1421,"excerpt":"Just connected monday.com to Slack but getting notification overload. How do you set this up without spamming your team?","question":"We connected monday.com to Slack and now my team is drowning in notifications. Every status change, comment, and assignment is creating noise.\n\nWhat's the right balance? Which notifications actually matter?\n\nCurrent setup:\n• #general gets all monday.com updates (terrible idea, I know)\n• Individual DMs for assignments\n\nWe need:\n• Important updates in relevant channels\n• Way to discuss monday.com items in Slack threads\n• Ability to create monday.com items from Slack\n\nAny recommended channel structure or automation recipes?","answers":[{"author":"willconnect","timestamp":"4 days ago","votes":19,"isAccepted":true,"content":"Notification fatigue is real. Here's the setup that works:\n\n**Channel structure:**\n• #project-updates — High-level milestones only\n• #project-alerts — Blockers, overdue items, urgent mentions\n• #project-general — Team chat (no bot spam)\n\n**Essential automations only:**\n1. 'When status changes to Blocked, notify #project-alerts'\n2. 'When item becomes overdue, notify assignee and #project-alerts'\n3. 'When high priority item created, notify #project-updates'\n\n**Turn OFF:**\n• Status changes to In Progress, Done, etc.\n• Every comment\n• Every assignment\n\n**Slack → monday.com workflows:**\nUse the /monday slash command or message actions to create items. Train your team: 'If it needs tracking, create it in monday.com. If it's quick chat, keep it in Slack.'\n\n**Pro tip:** Use Slack threads for item discussions. The monday.com bot will thread replies back to the item's updates section. Keeps context together.\n\nStart with minimal notifications, add more only when requested."},{"author":"deepworkdenise","timestamp":"3 days ago","votes":10,"isAccepted":false,"content":"The key insight: Slack is for conversation, monday.com is for work tracking. Don't duplicate.\n\nOur rule: If a Slack discussion leads to a decision or action, someone creates a monday.com item and links it in the thread.\n\n**Our notification setup:**\n• Blocked items → #urgent\n• Completed milestones → #wins (positive reinforcement!)\n• Direct mentions only → DMs\n\nEverything else stays in monday.com. We check monday.com dashboards in standups, not Slack.\n\n**For creation from Slack:**\nWe use a simple workflow:\n1. React with 📋 emoji to any Slack message\n2. Zapier creates a monday.com item in our 'Inbox' board\n3. We triage in monday.com during planning\n\nThis prevents 'oh, we talked about that in Slack' situations.\n\nBottom line: Less is more with notifications. Trust your team to check monday.com."}]},{"id":"monday-mobile-app","title":"Is the monday.com mobile app actually usable?","category":"Features","tags":["mobile","app","ios","android","remote-work"],"author":"mike-agency","timestamp":"1 week ago","votes":37,"views":2034,"excerpt":"My team works on-site frequently and needs mobile access. Is the monday.com mobile app good enough for field work or should we look elsewhere?","question":"I manage a team of technicians who are on client sites 80% of the time. We need to:\n\n• Update job status from the field\n• Upload photos of completed work\n• Access project details and client info\n• Track time on jobs\n• Get notifications for urgent updates\n\nThe monday.com mobile app reviews are mixed. Some say it's great, others say it's limited.\n\nFor those using it in the field — what's the reality? Can it replace laptop access for day-to-day work? Any tips for making it work better?","answers":[{"author":"brucefieldsvc","timestamp":"6 days ago","votes":28,"isAccepted":true,"content":"$12"},{"author":"jasontechguy","timestamp":"5 days ago","votes":14,"isAccepted":false,"content":"The mobile app has improved significantly in the last year. The latest updates made it actually usable for real work.\n\n**Game-changers for field work:**\n• Widgets — add monday.com widgets to your phone home screen for quick status updates\n• Shortcuts — iOS/Android shortcuts for common actions\n• Camera integration — scan barcodes/QR codes directly into item fields\n\n**Setup tips:**\n1. Create a 'Mobile View' for each board with only essential columns\n2. Use the 'My Work' section — it's the fastest way to see assigned items\n3. Enable biometric login — saves time vs typing password\n4. Use the share sheet — create items from photos/documents in other apps\n\n**Limitations to know:**\n• Can't create new boards or complex automations\n• Formula columns are read-only\n• Mirror columns sometimes don't sync immediately\n\nFor your use case (status, photos, time tracking), it's more than adequate. For complex data entry, stick to desktop."}]},{"id":"monday-form-view","title":"How to use monday.com Forms for client intake?","category":"Tutorial","tags":["forms","intake","client-management","automation"],"author":"priya.agencylife","timestamp":"4 days ago","votes":29,"views":1567,"excerpt":"Want to replace Typeform with monday.com Forms for client project intake. What's possible and what are the limitations?","question":"Currently paying $35/month for Typeform to handle client project intake. I see monday.com has Forms — can it replace Typeform?\n\nOur current Typeform collects:\n• Client contact info\n• Project type (dropdown)\n• Budget range\n• Timeline/deadline\n• Project description (long text)\n• File attachments (logos, brand guidelines)\n\nCan monday.com Forms do all this? Can I:\n• Customize the design/branding?\n• Add conditional logic (show questions based on previous answers)?\n• Get email notifications when forms are submitted?\n• Auto-assign based on project type?\n\nWould love to hear from anyone who made the switch!","answers":[{"author":"andyformstack","timestamp":"3 days ago","votes":22,"isAccepted":true,"content":"$13"},{"author":"caitlin_cx","timestamp":"2 days ago","votes":13,"isAccepted":false,"content":"One huge advantage of monday.com Forms: No more copy-paste from form submissions into your project board.\n\nWith Typeform, we had to manually create project cards from submissions. With monday.com Forms, submissions ARE the project cards. Instant workflow.\n\n**Pro tips for intake forms:**\n\n1. **Use the 'Hidden' field type** to capture source (e.g., which landing page they came from)\n\n2. **Set default values** for internal fields — we auto-tag submissions with 'New Lead' status and 'Needs Review' priority\n\n3. **Add a confirmation message** with next steps — reduces 'did you get my form?' emails\n\n4. **Connect to your CRM board** using automations — when intake form submitted, also create contact in CRM\n\n**Limitation workaround:**\nFor conditional logic, we use a two-step process:\n1. Simple monday.com Form for initial qualification\n2. Qualified leads get a Calendly link to book a call\n\nThis actually improved our conversion — personal touch beats long forms."}]},{"id":"monday-dashboard-widgets","title":"Best monday.com dashboard widgets for executive reporting?","category":"Features","tags":["dashboard","reporting","widgets","executive","kpi"],"author":"sophieb_exec","timestamp":"6 days ago","votes":24,"views":1389,"excerpt":"Need to build executive dashboards that show high-level KPIs. Which widgets actually impress leadership vs just looking pretty?","question":"I'm tasked with building executive dashboards in monday.com for monthly leadership meetings. The executives want:\n\n• Project health overview (on track, at risk, blocked)\n• Resource utilization across teams\n• Budget vs actual spending\n• Milestone completion rates\n• Team productivity metrics\n\nI've played with the widget gallery but I'm overwhelmed by options. Which widgets actually provide value vs vanity metrics?\n\nAlso, can I combine data from multiple boards into one dashboard? We have separate boards for each department.\n\nAny examples of executive dashboards that actually get used would be super helpful!","answers":[{"author":"marcusdata77","timestamp":"5 days ago","votes":19,"isAccepted":true,"content":"$14"},{"author":"tanya.ops","timestamp":"4 days ago","votes":11,"isAccepted":false,"content":"The widget that gets the most exec attention: **The Battery Widget** showing project health.\n\nWe color-code:\n• Green: On track, no action needed\n• Yellow: At risk, needs discussion\n• Red: Blocked, immediate attention\n\nIn meetings, we literally just review the battery widget and only discuss yellow/red items. Cut meeting time in half.\n\n**For budget tracking:**\nUse the Numbers widget with formulas. Set up formula columns in your boards:\n• Budget Remaining = {Budget} - {Actual Spend}\n• % Used = ({Actual Spend} / {Budget}) * 100\n\nThen display these in the Numbers widget with conditional formatting (red if < 20% remaining).\n\n**Multi-board tip:**\nCreate a 'Master Projects' board that mirrors key data from department boards using Connect Boards and Mirror columns. Then build dashboards off the master board. Much cleaner than trying to aggregate across 5+ boards.\n\n**One more:** The 'Updates' widget filtered to executive mentions only. Keeps leadership in the loop on what needs their attention."}]},{"id":"monday-vs-notion","title":"monday.com vs Notion: Which is better for team wikis and projects?","category":"Comparison","tags":["comparison","notion","wiki","documentation"],"author":"priya_r_notion","timestamp":"2 days ago","votes":44,"views":2650,"excerpt":"Our team uses Notion for docs and wants to add project management. Should we switch to monday.com or keep using both tools?","question":"We're a 25-person product team currently all-in on Notion for documentation, wikis, and lightweight project tracking. Notion's database views are great for simple boards, but our projects are getting complex.\n\nWe need:\n• Proper automations (Notion's are very basic)\n• Better timeline and dependency tracking\n• Client-facing dashboards\n• Integration with development tools (GitHub, Jira)\n\nShould we:\nA) Add monday.com alongside Notion (docs in Notion, projects in monday.com)\nB) Move everything to monday.com\nC) Stay in Notion and use integrations\n\nAnyone running this hybrid setup? What works?","answers":[{"author":"nicktools","timestamp":"1 day ago","votes":31,"isAccepted":true,"content":"$15"},{"author":"annalovesnotion","timestamp":"18 hours ago","votes":16,"isAccepted":false,"content":"Former Notion-only advocate, now hybrid user. The moment I needed automations beyond 'when status changes, send notification,' Notion fell apart.\n\nmonday.com automations are genuinely powerful — cross-board moves, conditional logic, multi-step workflows. Notion can't compete here.\n\nBut I'd never give up Notion for docs. monday.com's WorkDocs are improving but still lack:\n• Nested pages\n• Inline databases\n• Rich embedding\n• The overall writing experience\n\nThe hybrid works beautifully when you set clear boundaries."}]},{"id":"monday-vs-trello","title":"Migrating from Trello to monday.com: Worth it in 2025?","category":"Comparison","tags":["comparison","trello","migration","kanban"],"author":"davep_design","timestamp":"3 days ago","votes":39,"views":2210,"excerpt":"Trello's free tier keeps getting worse. Is monday.com a good upgrade path or overkill for a small team that loves kanban boards?","question":"Trello just limited free workspaces to 10 boards and removed some power-ups. Our 6-person design team is frustrated.\n\nWe mainly use kanban boards for:\n• Design requests pipeline\n• Sprint tracking\n• Client feedback collection\n• Asset management\n\nIs monday.com a natural upgrade from Trello? Or is it a completely different tool that will confuse a team used to simple kanban? What's the migration process like?","answers":[{"author":"steph.switched","timestamp":"2 days ago","votes":26,"isAccepted":true,"content":"$16"},{"author":"carla.ux","timestamp":"1 day ago","votes":14,"isAccepted":false,"content":"Design team lead here. We made the Trello → monday.com switch and it transformed our workflow.\n\nThe biggest wins for designers:\n• File versioning on items (no more 'logo_final_FINAL_v3.png')\n• Creative request forms that auto-create kanban cards\n• Time tracking per design task\n• Client approval workflow with status automations\n\nTrello could never do these things without paid power-ups stacked on top of each other.\n\nOne tip: Keep your first board simple. Recreate your Trello workflow exactly, then optimize. Don't redesign everything at once."}]},{"id":"monday-vs-jira","title":"monday.com vs Jira for software development teams","category":"Comparison","tags":["comparison","jira","software-development","agile"],"author":"devlead_rachel88","timestamp":"4 days ago","votes":48,"views":2890,"excerpt":"Our engineering team uses Jira but product and design hate it. Can monday.com handle actual software development workflows or is it too simple?","question":"Classic problem: Engineering loves Jira, everyone else hates it. Product managers can't navigate it, designers refuse to update it, and stakeholders never look at it.\n\nCan monday.com actually handle:\n• Sprint planning with story points\n• Bug tracking with severity levels\n• Git integration (branch → PR → merge tracking)\n• Release management\n• Backlog grooming\n\nOr will the developers revolt if I suggest moving off Jira? Has anyone made this switch successfully for a 15+ person engineering team?","answers":[{"author":"kevinthecoder","timestamp":"3 days ago","votes":35,"isAccepted":true,"content":"$17"},{"author":"marcus_js","timestamp":"2 days ago","votes":20,"isAccepted":false,"content":"Developer perspective: I was skeptical about leaving Jira. Here's what changed my mind:\n\n1. **Speed** — monday.com loads in 2 seconds. Our Jira instance took 8-10 seconds per page.\n2. **Automation** — Creating automations in monday.com takes minutes vs Jira's workflow schemes that need admin access.\n3. **Board flexibility** — Switching between kanban, timeline, and table views is instant.\n\nWhat I still miss:\n• Advanced filtering (JQL is genuinely powerful)\n• Native code review integration depth\n• Sprint velocity tracking built-in\n\nThe compromise: We kept GitHub Issues for pure technical tracking and sync to monday.com for team visibility. Best of both worlds."}]},{"id":"monday-api-getting-started","title":"Getting started with the monday.com API: A developer's guide","category":"API","tags":["api","graphql","development","integration"],"author":"nina.dev","timestamp":"1 day ago","votes":41,"views":1980,"excerpt":"Need to build a custom integration with monday.com's API. The GraphQL setup is confusing. Can someone walk through the basics?","question":"I'm building a custom dashboard that pulls data from monday.com boards. The API uses GraphQL which I haven't used much.\n\nI need to:\n1. Authenticate and get an API token\n2. Query board data (items, columns, values)\n3. Create and update items programmatically\n4. Set up webhooks for real-time updates\n\nThe documentation is decent but I'm struggling with:\n• The complexity_budget concept — my queries keep getting rate limited\n• Column values format — it's JSON within JSON and hard to parse\n• Webhook setup — how to receive real-time updates\n\nAny experienced monday.com API developers who can share tips?","answers":[{"author":"ryangql","timestamp":"18 hours ago","votes":33,"isAccepted":true,"content":"$18"},{"author":"amitdev_2025","timestamp":"12 hours ago","votes":18,"isAccepted":false,"content":"The monday.com SDK makes life much easier than raw GraphQL:\n\nnpm install monday-sdk-js\n\nFor server-side operations, use the API directly. For client-side (apps that run inside monday.com), use the SDK.\n\n**Pro tips:**\n1. Start with the API playground — build and test queries there before coding\n2. Use variables in your GraphQL queries for dynamic values\n3. The 'change_column_value' mutation expects a JSON string for the value field\n4. Webhook events are batched — you might receive multiple changes in one payload\n\n**Common pitfalls:**\n• Don't poll for changes — use webhooks or the Activity Logs API\n• Board IDs are numbers, not strings (common TypeScript issue)\n• File uploads use a different endpoint (REST, not GraphQL)\n• Subitems are on a separate board internally — query them via items.subitems"}]},{"id":"monday-webhooks-automation","title":"monday.com webhooks vs automations: When to use which?","category":"API","tags":["webhooks","automation","api","custom-development"],"author":"kyle_infra","timestamp":"3 days ago","votes":33,"views":1756,"excerpt":"Trying to decide between monday.com's built-in automations and custom webhook-based workflows. When does each approach make sense?","question":"We have workflows that need to trigger external systems when monday.com items change. I'm torn between:\n\nOption A: Use built-in automations with third-party integrations (Zapier/Make)\nOption B: Build custom webhook listeners that react to changes\n\nOur use cases:\n• When a deal closes, create a project in our internal tool\n• When a task is marked urgent, send a PagerDuty alert\n• Sync client data between monday.com and our database\n• Generate PDF reports when status changes to 'Complete'\n\nWhat are the reliability and cost trade-offs? When should I invest in custom development vs using no-code?","answers":[{"author":"jordanpipes","timestamp":"2 days ago","votes":25,"isAccepted":true,"content":"$19"},{"author":"workflow_wizard","timestamp":"1 day ago","votes":14,"isAccepted":false,"content":"Don't underestimate Make (Integromat). It handles surprisingly complex workflows without code.\n\nFor your PDF report case: Make has a module that generates PDFs from templates. No custom development needed.\n\nFor database sync: Make can connect to MySQL, PostgreSQL, MongoDB, and REST APIs. We sync 5,000 records/day between monday.com and our internal DB using Make.\n\nCost comparison for 10,000 operations/month:\n• Zapier: ~$100/month\n• Make: ~$30/month\n• Custom webhook (AWS Lambda): ~$5/month + developer time\n\nThe hidden cost of custom is maintenance. Webhooks break silently. You need monitoring, logging, and someone on call.\n\nMy approach: Make for 80% of workflows, custom webhooks for the 20% that need it."}]},{"id":"monday-guest-users-permissions","title":"How to manage guest users and permissions in monday.com?","category":"Security","tags":["permissions","guest-users","security","client-access"],"author":"sophie_w","timestamp":"2 days ago","votes":36,"views":1890,"excerpt":"Need to give clients view-only access to their project boards without exposing internal work. The permissions system is confusing. Help!","question":"We're an agency managing 15+ client projects in monday.com. We want clients to:\n\n• See their project status (view only)\n• Comment on items\n• Upload files for review\n• NOT see other client boards\n• NOT see internal pricing, costs, or team notes\n\nThe guest user system seems complex. Questions:\n1. How do guest users count toward our seat limit?\n2. Can I hide specific columns from guests?\n3. Can guests access dashboards?\n4. What's the best way to structure boards for guest access?\n5. Are there security risks I should worry about?","answers":[{"author":"itadmin_rob","timestamp":"1 day ago","votes":28,"isAccepted":true,"content":"$1a"},{"author":"sarahk_2024","timestamp":"22 hours ago","votes":15,"isAccepted":false,"content":"One critical security tip many agencies miss: Board names are visible in the workspace sidebar.\n\nIf you name a board 'ClientX - $50K Website Project,' guests might see other board names in navigation. Use generic names or create a dedicated workspace per client.\n\n**My agency setup:**\n• Workspace per client (Enterprise) or Group per client (Pro)\n• Client board = shareable, curated view\n• Internal board = all the messy details\n• Mirror columns connect them without exposing sensitive data\n\n**Gotcha:** Updates/comments are visible to all board members. Train your team not to leave sensitive internal notes on shared boards. Use a separate 'Internal Notes' column that's hidden from guests."}]},{"id":"monday-backup-data-export","title":"How to backup monday.com data? Export and disaster recovery options","category":"Security","tags":["backup","data-export","disaster-recovery","security"],"author":"james.harrington","timestamp":"5 days ago","votes":30,"views":1678,"excerpt":"What happens if monday.com goes down or we accidentally delete critical data? How do we backup our boards and what are the export options?","question":"Our entire company runs on monday.com and I'm realizing we have zero backup strategy. What happens if:\n\n• Someone accidentally deletes a board?\n• We need to audit historical data?\n• monday.com has an extended outage?\n• We want to migrate to another platform?\n\nQuestions:\n1. Does monday.com have automatic backups?\n2. Can we export all board data (including file attachments)?\n3. Are there third-party backup solutions?\n4. What's the data retention policy for deleted items?\n5. Can we set up automated periodic exports?","answers":[{"author":"dbapaul","timestamp":"4 days ago","votes":22,"isAccepted":true,"content":"$1b"},{"author":"yuki_data","timestamp":"3 days ago","votes":12,"isAccepted":false,"content":"We built an automated backup system using:\n• monday.com API (GraphQL)\n• AWS Lambda (runs daily at 2 AM)\n• S3 bucket with versioning\n\nTotal cost: ~$15/month for 50+ boards.\n\nThe script queries all boards, items, column values, updates, and file URLs. Files are downloaded and stored separately.\n\n**Key learning:** The API has rate limits. For large accounts (1000+ items), you need pagination and backoff logic. Our full backup takes ~45 minutes for 80 boards.\n\n**Recovery testing:** We test restoring from backup quarterly. Last test, we restored a deleted board with 500 items in 20 minutes.\n\nIf you don't want to build this, Rewind.io is worth every penny. Their restore is genuinely one-click."}]},{"id":"monday-construction-industry","title":"monday.com for construction project management: Real experience","category":"Industry","tags":["construction","field-work","project-management","industry"],"author":"frank_gc","timestamp":"1 day ago","votes":35,"views":2120,"excerpt":"Any construction companies using monday.com? We're managing 12 active job sites and need better coordination between office and field teams.","question":"We're a mid-size general contractor with 12 active projects ranging from $500K to $5M. Currently using spreadsheets and email (yes, really).\n\nWe need to track:\n• Project milestones and timelines per job site\n• Subcontractor schedules and compliance docs\n• RFIs (Requests for Information)\n• Change orders and budget tracking\n• Daily logs and site photos\n• Punch lists\n\nIs monday.com robust enough for construction? Or should we look at industry-specific tools like Procore or BuilderTrend?\n\nOur team: 8 PMs, 20 field supervisors, 5 office staff.","answers":[{"author":"vince.builds","timestamp":"16 hours ago","votes":27,"isAccepted":true,"content":"$1c"},{"author":"tony_electric","timestamp":"10 hours ago","votes":13,"isAccepted":false,"content":"Subcontractor perspective: I work with 3 GCs who use monday.com. It's fine for coordination.\n\nThe guest access feature lets me see my tasks, upload documents, and update status without a paid seat. That's huge — I'm not paying for 5 different PM tools.\n\nFor punch lists specifically, we created a brilliant system:\n1. Supervisor takes photo on mobile\n2. Creates monday.com item with photo + location tag\n3. Auto-assigns to responsible sub\n4. We update status and upload completion photo\n5. GC reviews and closes\n\nThe whole punch list process went from 2 weeks of email chaos to 3 days of organized tracking."}]},{"id":"monday-real-estate","title":"Using monday.com for real estate deal tracking and property management","category":"Industry","tags":["real-estate","deal-tracking","property-management","crm"],"author":"amandarealty","timestamp":"3 days ago","votes":32,"views":1870,"excerpt":"Real estate broker managing 40+ active deals. Can monday.com replace my collection of spreadsheets, Calendly, and a basic CRM?","question":"I run a real estate brokerage with 8 agents. We're drowning in disconnected tools:\n• Google Sheets for deal tracking\n• Calendly for showings\n• Mailchimp for drip campaigns\n• A basic CRM that nobody updates\n\nCan monday.com consolidate this? Specifically need:\n• Deal pipeline with stages (Lead → Showing → Offer → Under Contract → Closed)\n• Property listings database\n• Commission tracking and split calculations\n• Client communication log\n• Transaction checklist (inspections, appraisals, title work, etc.)\n• Agent performance dashboards\n\nAny real estate professionals using monday.com successfully?","answers":[{"author":"brokerben_tech","timestamp":"2 days ago","votes":24,"isAccepted":true,"content":"$1d"},{"author":"closingqueen_linda","timestamp":"1 day ago","votes":15,"isAccepted":false,"content":"Solo agent here using monday.com for everything. The game-changer was automating the transaction process.\n\nWhen I move a deal to 'Under Contract':\n1. Auto-creates 15 checklist items with relative due dates\n2. Notifies transaction coordinator\n3. Creates calendar entries for key dates\n4. Sends client an update email\n\nWhat used to take 30 minutes of manual setup happens in seconds.\n\nFor commission tracking: I use a Formula column that calculates my split based on deal value and agent tier. Dashboard shows YTD earnings in real-time.\n\nQuick tip: Use the Location column for property addresses — it adds a map view that's great for planning showings by area."}]},{"id":"monday-hr-onboarding","title":"monday.com for HR: Employee onboarding and people operations","category":"Industry","tags":["hr","onboarding","people-ops","employee-management"],"author":"kim.people.ops","timestamp":"4 days ago","votes":29,"views":1650,"excerpt":"Looking to build an employee onboarding workflow in monday.com. Want to automate the first-90-days process. Has anyone done this well?","question":"We're a 120-person company hiring 3-4 people per month. Our onboarding is a mess — PDFs, email chains, and dropped tasks.\n\nI want to build in monday.com:\n• New hire checklist (IT setup, benefits enrollment, training schedule)\n• 30/60/90 day milestone tracking\n• Equipment request workflow\n• Training completion tracking\n• Manager check-in reminders\n• Employee directory with key info\n\nAnyone built a comprehensive HR/onboarding system in monday.com? What worked and what didn't? Should I use their HR template or build from scratch?","answers":[{"author":"hannah_hr_nerd","timestamp":"3 days ago","votes":22,"isAccepted":true,"content":"$1e"},{"author":"derek_sysadmin","timestamp":"2 days ago","votes":11,"isAccepted":false,"content":"IT perspective on onboarding in monday.com:\n\nWe automated equipment provisioning entirely:\n1. HR adds new hire → automation creates IT setup items\n2. Based on role (dropdown), different equipment lists are generated\n3. Items have dependencies: Order laptop → Configure → Ship → Confirm receipt\n4. Tracking column for asset serial numbers\n\n**Before:** Average 5 days to fully provision a new hire\n**After:** Average 2 days, with zero dropped tasks\n\nThe key insight: Connect the IT board to an Asset Inventory board. When equipment is assigned to a new hire, it's automatically marked as 'In Use' in inventory. When they leave, reverse the process.\n\nFor the employee directory: monday.com works but consider whether you really need it there. A simple Notion page or Google Sheet might be better for a directory that everyone needs to reference but rarely edit."}]},{"id":"monday-software-dev-workflow","title":"Building a complete software development workflow in monday.com","category":"Tutorial","tags":["software-dev","agile","workflow","sprint-planning"],"author":"pat.codes","timestamp":"2 days ago","votes":45,"views":2340,"excerpt":"Step-by-step guide request: How to set up monday.com for a software development team with sprints, backlog, and CI/CD integration?","question":"I'm an engineering manager setting up monday.com for my 12-person dev team. We're coming from Linear and need to replicate:\n\n• Product backlog with prioritization\n• 2-week sprint cycles\n• Story points and velocity tracking\n• Bug vs feature vs tech debt categorization\n• GitHub integration (PR status on items)\n• Release tracking\n\nCan someone share a detailed setup guide? I want to get this right before the team migrates. We tried once before and it was chaos because the boards weren't structured well.","answers":[{"author":"scrum_lord_steve","timestamp":"1 day ago","votes":37,"isAccepted":true,"content":"$1f"},{"author":"olivia-eng","timestamp":"18 hours ago","votes":19,"isAccepted":false,"content":"Coming from Linear specifically, here's what you'll miss and how to compensate:\n\n**Linear features monday.com lacks:**\n• Cycles (sprints) as a first-class concept → Use groups or separate boards\n• Automatic issue numbering → Use auto-number column\n• Triage workflow → Build with automations\n• Command-K navigation → monday.com search is slower\n\n**Linear features monday.com does better:**\n• Cross-team visibility\n• Custom dashboards\n• Client/stakeholder sharing\n• Non-engineering team integration\n\n**My pragmatic advice:**\nDon't try to replicate Linear exactly. monday.com is a different tool with different strengths. Adapt your workflow to leverage what monday.com does well.\n\nAlso: Start your team with ONE board for the first sprint. Add complexity only when you feel the pain of not having it. Over-engineering the setup is the #1 reason dev teams fail with monday.com."}]},{"id":"monday-vs-wrike","title":"monday.com vs Wrike: Which is better for enterprise project management?","category":"Comparison","tags":["comparison","wrike","enterprise","project-management"],"author":"laura.enterprise","timestamp":"5 days ago","votes":33,"views":1950,"excerpt":"Evaluating monday.com and Wrike for a 200-person organization. Wrike seems more enterprise-ready but monday.com has better UX. Thoughts?","question":"We're a 200-person company looking to standardize on one project management platform. Currently have teams using Asana, Trello, and spreadsheets.\n\nWe've narrowed to monday.com vs Wrike based on:\n• Cross-department visibility\n• Enterprise security features (SSO, audit logs)\n• Scalability for 200+ users\n• Resource management and capacity planning\n• Advanced reporting and analytics\n• Change management (ease of adoption)\n\nWrike's enterprise features look more mature, but monday.com's interface is so much better. Which matters more at scale?","answers":[{"author":"peter_rollouts","timestamp":"4 days ago","votes":26,"isAccepted":true,"content":"$20"},{"author":"migrated_maria","timestamp":"3 days ago","votes":14,"isAccepted":false,"content":"We moved 180 users from Wrike to monday.com last year. The migration was painful but worth it.\n\nWhy we left Wrike:\n• Users found it overwhelming (too many nested folders)\n• The interface felt dated\n• Adoption was stuck at 60% after 2 years\n• Automations required the paid add-on\n\nAfter monday.com:\n• Adoption hit 90% within 3 months\n• Teams actually enjoy using it (sounds minor but matters)\n• Cross-department collaboration improved significantly\n\nWhat we miss from Wrike:\n• Proofing workflow (we added Ziflow)\n• Custom fields on folders (not just items)\n• More detailed time reports\n\nThe bottom line: A tool your team uses at 90% is infinitely better than a tool with more features used at 60%."}]},{"id":"monday-vs-smartsheet","title":"monday.com vs Smartsheet: Spreadsheet power users, which is better?","category":"Comparison","tags":["comparison","smartsheet","spreadsheet","enterprise"],"author":"carlos_mfg","timestamp":"2 days ago","votes":28,"views":1720,"excerpt":"Our team lives in spreadsheets. Is Smartsheet or monday.com a better upgrade path for Excel power users who need more collaboration?","question":"We're a manufacturing operations team that runs everything in Excel. The team is very comfortable with formulas, pivot tables, and data manipulation.\n\nWe need to upgrade to a collaborative platform but worried about losing the spreadsheet flexibility we rely on.\n\nSmartsheet seems like 'Excel online with project management' while monday.com seems like 'project management with some spreadsheet features.'\n\nWhich better serves a team that thinks in rows and columns? We need:\n• Complex formulas and calculated fields\n• Conditional formatting\n• Data rollups and summaries\n• Gantt charts\n• Cross-sheet references\n• Import/export Excel compatibility","answers":[{"author":"exceltomonday","timestamp":"1 day ago","votes":21,"isAccepted":true,"content":"$21"},{"author":"rajeev_plant","timestamp":"20 hours ago","votes":12,"isAccepted":false,"content":"Manufacturing engineer here. We chose monday.com over Smartsheet and here's why:\n\nOur team was resistant to change from Excel. Smartsheet would have been easier to adopt initially. But monday.com's automation capabilities transformed our operations in ways Smartsheet couldn't.\n\nExamples:\n• When a production order status changes to 'Quality Check,' automated notification to QA team\n• When inventory quantity drops below threshold, auto-create purchase order item\n• When a defect is logged, auto-assign to the responsible production line\n\nNone of these are possible in Smartsheet without expensive add-ons or Zapier.\n\nThe formula gap is real — we work around it with formula columns and dashboard calculations. It's not Excel-level, but it's sufficient for 90% of use cases.\n\nBottom line: Accept some spreadsheet capability loss for massive gains in automation and collaboration."}]},{"id":"monday-workflow-optimization","title":"Advanced monday.com workflow tips: Reducing 10 hours/week of manual work","category":"Tutorial","tags":["workflow","optimization","automation","productivity"],"author":"diana.efficiency","timestamp":"1 day ago","votes":51,"views":2780,"excerpt":"After 2 years of optimization, we cut 10 hours/week of manual work using advanced monday.com techniques. Here's everything we learned.","question":"I've spent 2 years optimizing our monday.com setup and want to share what I've learned. Also looking for additional tips from the community.\n\nOur biggest time-savers involved:\n• Cross-board automations\n• Mirror columns for real-time data sync\n• Custom integrations via the API\n• Dashboard automations for reporting\n\nWhat are your most impactful workflow optimizations? Specifically interested in:\n1. Automations that save the most time\n2. Board structures that scale well\n3. Integrations that actually work reliably\n4. Dashboard setups that replace manual reporting","answers":[{"author":"agencyowner_mike","timestamp":"18 hours ago","votes":42,"isAccepted":true,"content":"$22"},{"author":"jess.process","timestamp":"12 hours ago","votes":22,"isAccepted":false,"content":"Additional tips from running a 150-person company on monday.com:\n\n**Board structure that scales:**\n• Never put more than 500 items on a board (performance degrades)\n• Archive completed items monthly (automate this!)\n• Use 'Done' boards per quarter: Q1-2024-Completed, etc.\n• Group by phase/status, not by person\n\n**Integrations that actually work reliably (tested over 12 months):**\n• Slack: 99.9% reliable\n• Google Calendar: 99% reliable\n• Gmail: 95% reliable (occasional sync delays)\n• Jira: 90% reliable (complex syncs can break)\n• HubSpot: 85% reliable (rate limits cause issues at scale)\n\n**The #1 tip nobody mentions:**\nDocument your automations. We created a board called 'Automation Registry' that lists every automation, what it does, which boards it affects, and who owns it. When something breaks (and it will), you know exactly where to look.\n\nWithout this registry, debugging automation chains is a nightmare."}]},{"id":"monday-custom-apps","title":"Building custom monday.com apps: Is the marketplace worth developing for?","category":"API","tags":["apps","marketplace","development","monetization"],"author":"ryan_ships_code","timestamp":"4 days ago","votes":27,"views":1540,"excerpt":"Considering building a monday.com marketplace app. What's the developer experience like and is there real revenue potential?","question":"I'm a developer considering building a custom app for the monday.com marketplace. I have an idea for a resource planning tool that goes beyond the native Workload view.\n\nQuestions for developers who've built marketplace apps:\n1. What's the development experience like? Good docs? Helpful support?\n2. How does the review/approval process work?\n3. What's the revenue model? Revenue sharing?\n4. How many users can you realistically expect?\n5. What technology stack works best?\n6. Any gotchas or limitations I should know about?","answers":[{"author":"zach_apps","timestamp":"3 days ago","votes":20,"isAccepted":true,"content":"$23"},{"author":"indiedev_sam","timestamp":"2 days ago","votes":11,"isAccepted":false,"content":"Honest revenue reality check:\n\nMy app has ~800 installs. About 60 are paid subscribers at $10/user/month.\n\nMonthly revenue: ~$3,500 before monday.com's 20% cut = ~$2,800 net.\n\nIt took 6 months of development and 3 months to get traction. I'm a solo developer.\n\nIs it worth it? As a side project, absolutely. As a full-time business, you'd need a top-tier app.\n\nThe marketplace is growing fast though. monday.com's user base is expanding, and there are genuine gaps in functionality that third-party apps can fill.\n\nYour resource planning idea has potential — the native Workload view is basic and teams are actively looking for better solutions. I'd validate demand by posting in the monday.com community forum before building."}]},{"id":"monday-enterprise-security","title":"monday.com Enterprise security features: Complete audit for compliance teams","category":"Security","tags":["enterprise","security","compliance","soc2","gdpr"],"author":"securitymark_fin","timestamp":"3 days ago","votes":25,"views":1430,"excerpt":"Our security team needs to approve monday.com for enterprise use. What security certifications, controls, and features does it have?","question":"I'm the CISO at a financial services company evaluating monday.com Enterprise. Our security team requires:\n\n• SOC 2 Type II compliance\n• GDPR compliance\n• SSO/SAML integration\n• Data encryption (at rest and in transit)\n• Audit logging\n• Data residency options\n• IP restrictions\n• Session management\n\nWhat security features does monday.com actually have? Any security concerns I should raise? We're coming from on-premise Jira Server, so cloud security is a major discussion point.","answers":[{"author":"elena_infosec","timestamp":"2 days ago","votes":19,"isAccepted":true,"content":"$24"},{"author":"thomascloud99","timestamp":"1 day ago","votes":10,"isAccepted":false,"content":"Additional security considerations from our Jira Server → monday.com migration:\n\n**The cloud trust factor:**\nYour biggest hurdle will be convincing stakeholders that cloud is safe. Present monday.com's trust center: monday.com/trust — it has all certifications, penetration test summaries, and infrastructure details.\n\n**What we configured on day one:**\n1. SSO-only login (disabled password auth)\n2. SCIM for automatic user provisioning from Azure AD\n3. IP whitelist for office and VPN ranges\n4. 30-minute session timeout\n5. Required 2FA for admin accounts\n6. Weekly audit log reviews\n\n**The gotcha for regulated industries:**\nmondday.com stores data in AWS US-East by default. If you need EU data residency, request it during contract negotiation — it's available but not automatic.\n\nAlso: Third-party marketplace apps may store data outside monday.com's infrastructure. Audit each app's data handling before approving."}]}]}]}]]}],null,"$L25"]}]
+a:["$","$1","h",{"children":[null,[["$","$L26",null,{"children":"$L27"}],null],["$","$L28",null,{"children":["$","div",null,{"hidden":true,"children":["$","$29",null,{"fallback":null,"children":"$L2a"}]}]}]]}]
+2b:I[4431,[],"OutletBoundary"]
+2d:I[5278,[],"AsyncMetadataOutlet"]
+25:["$","$L2b",null,{"children":["$L2c",["$","$L2d",null,{"promise":"$@2e"}]]}]
+27:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+2c:null
+2e:{"metadata":[["$","title","0",{"children":"Trouble on Mondays | monday.com Community Forum"}],["$","meta","1",{"name":"description","content":"The community forum for monday.com power users. Get answers, share workflows, and connect with productivity enthusiasts."}]],"error":null,"digest":"$undefined"}
+2a:"$2e:metadata"
