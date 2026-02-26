@@ -21,11 +21,16 @@ export async function sendNotificationEmail(subject: string, body: string): Prom
     host: SMTP_HOST,
     port: SMTP_PORT,
     secure: SMTP_SECURE,
+    connectionTimeout: 15000,
+    greetingTimeout: 15000,
+    socketTimeout: 20000,
     auth: {
       user: SMTP_USER,
       pass: SMTP_PASS,
     },
   });
+
+  console.log(`Attempting email notification: ${subject}`);
 
   await transporter.sendMail({
     from: `Trouble on Mondays <${SMTP_USER}>`,
