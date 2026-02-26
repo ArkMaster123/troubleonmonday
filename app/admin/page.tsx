@@ -24,8 +24,12 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [pendingActions, setPendingActions] = useState<Record<number, 'approved' | 'rejected'>>({});
-  const [expandedRows, setExpandedRows] = useState<Record<number, boolean>>({});
-  const [actionMessage, setActionMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [selectedSubmissionId, setSelectedSubmissionId] = useState<number | null>(null);
+  const [actionMessage, setActionMessage] = useState<{
+    type: 'success' | 'error';
+    text: string;
+    submissionId?: number;
+  } | null>(null);
   const [settings, setSettings] = useState<AdminSettingsResponse | null>(null);
   const [settingsLoading, setSettingsLoading] = useState(false);
   const [settingsSaving, setSettingsSaving] = useState(false);
@@ -83,6 +87,19 @@ export default function AdminPage() {
     if (authed) fetchSettings();
   }, [authed, fetchSettings]);
 
+  useEffect(() => {
+    if (selectedSubmissionId === null) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedSubmissionId(null);
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [selectedSubmissionId]);
+
   async function saveSettings() {
     setSettingsSaving(true);
     setSettingsMessage(null);
@@ -138,16 +155,16 @@ export default function AdminPage() {
 
       if (!res.ok || !data.success) {
         const reason = typeof data.error === 'string' ? data.error : 'Failed to update submission status';
-        setActionMessage({ type: 'error', text: reason });
+        setActionMessage({ type: 'error', text: reason, submissionId: id });
         return;
       }
 
       setSubmissions((prev) =>
         prev.map((s) => (s.id === id ? { ...s, status } : s))
       );
-      setActionMessage({ type: 'success', text: `Submission #${id} marked ${status}.` });
+      setActionMessage({ type: 'success', text: `Submission #${id} marked ${status}.`, submissionId: id });
     } catch {
-      setActionMessage({ type: 'error', text: 'Failed to update submission status' });
+      setActionMessage({ type: 'error', text: 'Failed to update submission status', submissionId: id });
     } finally {
       setPendingActions((prev) => {
         const next = { ...prev };
@@ -156,6 +173,15 @@ export default function AdminPage() {
       });
     }
   }
+
+  const selectedSubmission = selectedSubmissionId === null
+    ? null
+    : submissions.find((sub) => sub.id === selectedSubmissionId) ?? null;
+  const selectedSubmissionPending = selectedSubmission ? Boolean(pendingActions[selectedSubmission.id]) : false;
+  const modalActionMessage =
+    selectedSubmission && actionMessage?.submissionId === selectedSubmission.id
+      ? actionMessage
+      : null;
 
   if (!authed) {
     return (
@@ -295,9 +321,8 @@ export default function AdminPage() {
             </thead>
             <tbody>
               {submissions.map((sub) => {
-                const isExpanded = Boolean(expandedRows[sub.id]);
                 const isPending = Boolean(pendingActions[sub.id]);
-                const shouldTruncate = sub.content.length > 180 && !isExpanded;
+                const shouldTruncate = sub.content.length > 180;
                 const contentPreview = shouldTruncate ? `${sub.content.slice(0, 180)}...` : sub.content;
 
                 return (
@@ -306,21 +331,17 @@ export default function AdminPage() {
                     className="border-b border-slate-100 dark:border-white/[0.03] last:border-0 hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors"
                   >
                     <td className="px-5 py-4">
-                      <div className="font-medium mb-0.5 max-w-[300px] truncate">{sub.title}</div>
-                      <div className={`text-slate-400 dark:text-slate-500 text-xs max-w-[300px] ${isExpanded ? 'whitespace-pre-wrap break-words' : ''}`}>
+                      <button
+                        type="button"
+                        onClick={() => setSelectedSubmissionId(sub.id)}
+                        className="font-medium mb-0.5 max-w-[300px] truncate text-left hover:text-red-500 transition-colors cursor-pointer"
+                      >
+                        {sub.title}
+                      </button>
+                      <div className="text-slate-400 dark:text-slate-500 text-xs max-w-[300px] whitespace-pre-wrap break-words">
                         {contentPreview}
                       </div>
-                      {sub.content.length > 180 && (
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setExpandedRows((prev) => ({ ...prev, [sub.id]: !prev[sub.id] }))
-                          }
-                          className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors cursor-pointer"
-                        >
-                          {isExpanded ? 'Collapse' : 'Read more'}
-                        </button>
-                      )}
+                      {sub.content.length > 180 && <div className="mt-1 text-[11px] text-slate-400">Open View for full content</div>}
                     </td>
                     <td className="px-5 py-4 text-slate-500">{sub.category}</td>
                     <td className="px-5 py-4 text-slate-400 whitespace-nowrap text-xs">{new Date(sub.created_at).toLocaleDateString()}</td>
@@ -331,6 +352,13 @@ export default function AdminPage() {
                     </td>
                     <td className="px-5 py-4">
                       <div className="flex gap-2">
+                        <button
+                          type="button"
+                          onClick={() => setSelectedSubmissionId(sub.id)}
+                          className="px-2.5 py-1 bg-slate-500/10 text-slate-600 dark:text-slate-300 hover:bg-slate-500/20 text-xs font-semibold rounded-lg transition-colors cursor-pointer"
+                        >
+                          View
+                        </button>
                         {sub.status !== 'approved' && (
                           <button
                             onClick={() => handleStatusChange(sub.id, 'approved')}
@@ -356,6 +384,126 @@ export default function AdminPage() {
               })}
             </tbody>
           </table>
+        </div>
+      )}
+
+      {selectedSubmission && (
+        <div
+          className="fixed inset-0 z-40 bg-slate-900/60 p-4 md:p-8"
+          onClick={() => setSelectedSubmissionId(null)}
+          aria-hidden="true"
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="submission-detail-title"
+            className="max-w-3xl mx-auto mt-6 md:mt-14 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/[0.08] rounded-2xl shadow-2xl overflow-hidden"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="px-6 py-4 border-b border-slate-200 dark:border-white/[0.08] flex items-start justify-between gap-4">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <h2 id="submission-detail-title" className="text-lg font-bold tracking-tight">
+                    {selectedSubmission.title}
+                  </h2>
+                  {selectedSubmission.status === 'pending' && (
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider border border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                      Pending review
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-slate-400">Submission #{selectedSubmission.id}</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedSubmissionId(null)}
+                className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors text-xl leading-none cursor-pointer"
+                aria-label="Close details modal"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="px-6 py-5 space-y-5 max-h-[70vh] overflow-y-auto">
+              <div className="grid sm:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-slate-400 mb-1">Category</p>
+                  <p className="font-medium text-slate-700 dark:text-slate-200">{selectedSubmission.category}</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-slate-400 mb-1">Created</p>
+                  <p className="font-medium text-slate-700 dark:text-slate-200">{new Date(selectedSubmission.created_at).toLocaleString()}</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-slate-400 mb-1">Status</p>
+                  <span className={`inline-flex px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider border ${statusColors[selectedSubmission.status]}`}>
+                    {selectedSubmission.status}
+                  </span>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-slate-400 mb-1">Author name</p>
+                  <p className="font-medium text-slate-700 dark:text-slate-200">{selectedSubmission.author_name || '—'}</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-slate-400 mb-1">Author email</p>
+                  <p className="font-medium text-slate-700 dark:text-slate-200 break-all">{selectedSubmission.author_email || '—'}</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-slate-400 mb-1">Submission ID</p>
+                  <p className="font-medium text-slate-700 dark:text-slate-200">{selectedSubmission.id}</p>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-wider text-slate-400 mb-2">Full content</p>
+                <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50 dark:bg-slate-950/60 p-4 whitespace-pre-wrap break-words text-sm text-slate-700 dark:text-slate-200">
+                  {selectedSubmission.content}
+                </div>
+              </div>
+
+              {modalActionMessage && (
+                <div
+                  className={`rounded-xl border px-4 py-2 text-sm ${
+                    modalActionMessage.type === 'success'
+                      ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                      : 'border-red-500/20 bg-red-500/10 text-red-600 dark:text-red-400'
+                  }`}
+                >
+                  {modalActionMessage.text}
+                </div>
+              )}
+            </div>
+
+            <div className="px-6 py-4 border-t border-slate-200 dark:border-white/[0.08] flex flex-wrap gap-2 justify-end">
+              {selectedSubmission.status !== 'approved' && (
+                <button
+                  type="button"
+                  onClick={() => handleStatusChange(selectedSubmission.id, 'approved')}
+                  disabled={selectedSubmissionPending}
+                  className="px-3 py-1.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/20 disabled:opacity-60 disabled:cursor-not-allowed text-sm font-semibold rounded-lg transition-colors cursor-pointer"
+                >
+                  {pendingActions[selectedSubmission.id] === 'approved' ? 'Approving...' : 'Approve'}
+                </button>
+              )}
+              {selectedSubmission.status !== 'rejected' && (
+                <button
+                  type="button"
+                  onClick={() => handleStatusChange(selectedSubmission.id, 'rejected')}
+                  disabled={selectedSubmissionPending}
+                  className="px-3 py-1.5 bg-red-500/10 text-red-600 dark:text-red-400 hover:bg-red-500/20 disabled:opacity-60 disabled:cursor-not-allowed text-sm font-semibold rounded-lg transition-colors cursor-pointer"
+                >
+                  {pendingActions[selectedSubmission.id] === 'rejected' ? 'Rejecting...' : 'Reject'}
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={() => setSelectedSubmissionId(null)}
+                className="px-3 py-1.5 bg-slate-500/10 text-slate-700 dark:text-slate-300 hover:bg-slate-500/20 text-sm font-semibold rounded-lg transition-colors cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
