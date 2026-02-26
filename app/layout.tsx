@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     description:
       'The community forum for monday.com power users. Get answers, share workflows, and connect with productivity enthusiasts.',
   },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
 };
 
 function NewThreadScript() {
