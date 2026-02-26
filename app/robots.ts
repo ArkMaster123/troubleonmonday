@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const DEFAULT_BASE_URL = 'https://troubleonmonday.com/troubleonmondays';
+const DEFAULT_BASE_URL = 'https://troubleonmonday.com';
 
 function getBaseUrl(): string {
   const candidate = process.env.APP_BASE_URL?.trim() || DEFAULT_BASE_URL;

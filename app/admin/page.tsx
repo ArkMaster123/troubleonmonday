@@ -19,7 +19,7 @@ export default function AdminPage() {
   const fetchSubmissions = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch('/troubleonmondays/api/admin/submissions', {
+      const res = await fetch('/api/admin/submissions', {
         headers: { Authorization: `Bearer ${password}` },
       });
       if (!res.ok) {
@@ -44,7 +44,7 @@ export default function AdminPage() {
 
   async function handleStatusChange(id: number, status: 'approved' | 'rejected') {
     try {
-      const res = await fetch('/troubleonmondays/api/admin/submissions', {
+      const res = await fetch('/api/admin/submissions', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

@@ -3,7 +3,7 @@ import threads from './data/threads.json';
 import { getApprovedSubmissions } from '@/lib/db';
 import { createTitleSlug } from '@/lib/slug';
 
-const DEFAULT_BASE_URL = 'https://troubleonmonday.com/troubleonmondays';
+const DEFAULT_BASE_URL = 'https://troubleonmonday.com';
 
 function getBaseUrl(): string {
   const candidate = process.env.APP_BASE_URL?.trim() || DEFAULT_BASE_URL;

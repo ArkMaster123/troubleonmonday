@@ -26,7 +26,7 @@ export default function AnswerForm({ threadId }: AnswerFormProps) {
     setErrorMsg('');
 
     try {
-      const res = await fetch('/troubleonmondays/api/answers', {
+      const res = await fetch('/api/answers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 

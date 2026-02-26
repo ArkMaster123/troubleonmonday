@@ -24,7 +24,7 @@ export default function SubmissionForm({ open, onClose }: { open: boolean; onClo
     setErrorMsg('');
 
     try {
-      const res = await fetch('/troubleonmondays/api/submissions', {
+      const res = await fetch('/api/submissions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, content, category, author_email: email, honeypot }),

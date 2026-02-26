@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import ThemeToggle from './components/ThemeToggle';
 
-const DEFAULT_BASE_URL = 'https://troubleonmonday.com/troubleonmondays';
+const DEFAULT_BASE_URL = 'https://troubleonmonday.com';
 
 function getMetadataBase(): URL {
   const candidate = process.env.APP_BASE_URL?.trim() || DEFAULT_BASE_URL;
