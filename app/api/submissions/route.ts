@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createSubmission } from '../../../lib/db';
+import { sendNotificationEmail } from '../../../lib/mailer';
 import { generatePseudonym } from '../../../lib/pseudonyms';
 
 const VALID_CATEGORIES = [
@@ -43,6 +44,23 @@ export async function POST(request: NextRequest) {
       safeEmail,
       authorName,
     );
+
+    sendNotificationEmail(
+      `New Trouble on Mondays submission (#${submission.id})`,
+      [
+        'A new submission was created and is awaiting review.',
+        `ID: ${submission.id}`,
+        `Category: ${submission.category}`,
+        `Title: ${submission.title}`,
+        `Author email: ${submission.author_email || '(not provided)'}`,
+        `Author name: ${submission.author_name}`,
+        '',
+        'Content:',
+        submission.content,
+      ].join('\n'),
+    ).catch((error) => {
+      console.error('Submission notification failed', error);
+    });
 
     return NextResponse.json({
       success: true,

@@ -13,7 +13,7 @@ Trouble on Mondays is a **community-style forum** that mimics Reddit/StackOverfl
 
 ## Tech Stack
 
-- **Next.js 15** — React framework with static export
+- **Next.js 15** — React framework with API routes
 - **Tailwind CSS v4** — Utility-first styling with dark mode
 - **TypeScript** — Type safety
 - **Static Hosting** — Deployed via Cloudflare Tunnel + Nginx
@@ -26,7 +26,8 @@ Trouble on Mondays is a **community-style forum** that mimics Reddit/StackOverfl
 - ✅ Category-based thread organization
 - ✅ Lead capture CTAs for Born & Brand
 - ✅ Mobile responsive
-- ✅ Fast static loading
+- ✅ Fast server-rendered loading
+- ✅ SQLite-backed submissions and answers API
 
 ## Programmatic SEO Strategy
 
@@ -40,7 +41,20 @@ Trouble on Mondays is a **community-style forum** that mimics Reddit/StackOverfl
 ```bash
 npm install
 npm run build
-# Static export to dist/
+npm run start
+```
+
+### Production environment variables
+
+```bash
+SUBMISSIONS_DB_PATH=/home/noah/data/troubleonmonday.db
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=...
+SMTP_PASS=...
+NOTIFY_EMAIL=bornandbrand@gmail.com
+ADMIN_PASSWORD=...
 ```
 
 ## Domain

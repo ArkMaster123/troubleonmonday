@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createAnswer } from '../../../lib/db';
+import { sendNotificationEmail } from '../../../lib/mailer';
 import { generatePseudonym } from '../../../lib/pseudonyms';
 import threads from '../../data/threads.json';
 
@@ -37,6 +38,23 @@ export async function POST(request: NextRequest) {
       safeEmail,
       authorName,
     );
+
+    sendNotificationEmail(
+      `New Trouble on Mondays answer (#${answer.id})`,
+      [
+        'A new answer was created and is awaiting review.',
+        `Answer ID: ${answer.id}`,
+        `Thread ID: ${answer.thread_id}`,
+        `Thread title: ${thread.title}`,
+        `Author email: ${answer.author_email || '(not provided)'}`,
+        `Author name: ${answer.author_name}`,
+        '',
+        'Content:',
+        answer.content,
+      ].join('\n'),
+    ).catch((error) => {
+      console.error('Answer notification failed', error);
+    });
 
     return NextResponse.json({
       success: true,
