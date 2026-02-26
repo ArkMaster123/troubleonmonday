@@ -48,12 +48,9 @@ npm run start
 
 ```bash
 SUBMISSIONS_DB_PATH=/home/noah/data/troubleonmonday.db
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=465
-SMTP_SECURE=true
-SMTP_USER=...
-SMTP_PASS=...
-NOTIFY_EMAIL=bornandbrand@gmail.com
+RESEND_API_KEY=...
+RESEND_FROM=noreply@example.com
+NOTIFY_EMAIL=moderation@example.com
 ADMIN_PASSWORD=...
 ```
 
