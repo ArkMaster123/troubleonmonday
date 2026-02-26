@@ -16,6 +16,7 @@ interface Thread {
   views: number;
   excerpt: string;
   answers: { author: string; timestamp: string; votes: number; isAccepted: boolean; content: string }[];
+  isCommunity?: boolean;
 }
 
 const categoryColors: Record<string, { bg: string; text: string }> = {
@@ -137,6 +138,14 @@ export default function ThreadList({ threads }: { threads: Thread[] }) {
               <div className="flex-1 min-w-0">
                 <div className="flex gap-2 items-center mb-1.5 text-[13px] flex-wrap">
                   <CategoryBadge category={thread.category} />
+                  {thread.isCommunity && (
+                    <>
+                      <span className="text-slate-300 dark:text-slate-600 text-[3px]">&#x2022;</span>
+                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-full font-semibold text-[10px] uppercase tracking-wider bg-violet-500/10 text-violet-500 border border-violet-500/20">
+                        Community
+                      </span>
+                    </>
+                  )}
                   <span className="text-slate-300 dark:text-slate-600 text-[3px]">&#x2022;</span>
                   <span className="text-slate-500 dark:text-slate-400 font-medium">{thread.author}</span>
                   <span className="text-slate-300 dark:text-slate-600 text-[3px]">&#x2022;</span>
