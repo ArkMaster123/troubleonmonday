@@ -72,6 +72,8 @@ npm run seo:weekly -- --dry-run
 
 Run without `--dry-run` to append validated, deduplicated threads to `app/data/threads.json`.
 
+The weekly generator count can also be overridden from `/admin` (SEO Automation panel). That override is persisted in `data/admin-settings.json` and takes precedence over `WEEKLY_POST_COUNT`.
+
 ## Domain
 
 - **Production:** https://troubleonmonday.com (pending DNS setup)

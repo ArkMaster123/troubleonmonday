@@ -8,6 +8,7 @@ const DEFAULT_ZONE = 'serp_api1';
 const DEFAULT_MODEL = 'minimax/minimax-m2.5';
 const DEFAULT_POST_COUNT = 3;
 const THREADS_PATH = path.resolve(process.cwd(), 'app/data/threads.json');
+const ADMIN_SETTINGS_PATH = path.resolve(process.cwd(), 'data/admin-settings.json');
 const BRIGHTDATA_ENDPOINT = 'https://api.brightdata.com/request';
 const OPENROUTER_ENDPOINT = 'https://openrouter.ai/api/v1/chat/completions';
 const MONDAY_SEED_QUERIES = [
@@ -30,6 +31,23 @@ function asInt(value, fallback) {
   const parsed = Number.parseInt(value ?? '', 10);
   if (Number.isNaN(parsed) || parsed <= 0) return fallback;
   return parsed;
+}
+
+async function readAdminWeeklyPostCount() {
+  try {
+    const raw = await readFile(ADMIN_SETTINGS_PATH, 'utf8');
+    const parsed = JSON.parse(raw);
+    const value = parsed?.weekly_post_count;
+    if (!Number.isInteger(value) || value < 1 || value > 20) {
+      return null;
+    }
+    return value;
+  } catch (error) {
+    if (error?.code === 'ENOENT') {
+      return null;
+    }
+    throw error;
+  }
 }
 
 function normalizeWhitespace(value) {
@@ -321,7 +339,9 @@ async function main() {
   const BRIGHTDATA_ZONE = process.env.BRIGHTDATA_ZONE || DEFAULT_ZONE;
   const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
   const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || DEFAULT_MODEL;
-  const WEEKLY_POST_COUNT = asInt(process.env.WEEKLY_POST_COUNT, DEFAULT_POST_COUNT);
+  const envWeeklyPostCount = asInt(process.env.WEEKLY_POST_COUNT, DEFAULT_POST_COUNT);
+  const adminWeeklyPostCount = await readAdminWeeklyPostCount();
+  const weeklyPostCount = adminWeeklyPostCount ?? envWeeklyPostCount;
 
   if (!BRIGHTDATA_API_KEY) {
     throw new Error('Missing BRIGHTDATA_API_KEY environment variable.');
@@ -344,7 +364,7 @@ async function main() {
       .filter(Boolean)
   );
 
-  const serpQueries = MONDAY_SEED_QUERIES.slice(0, Math.max(4, WEEKLY_POST_COUNT + 1));
+  const serpQueries = MONDAY_SEED_QUERIES.slice(0, Math.max(4, weeklyPostCount + 1));
   const serpFindings = [];
 
   for (const query of serpQueries) {
@@ -366,7 +386,7 @@ async function main() {
   const prompt = buildPrompt({
     serpFindings,
     allowedCategories,
-    targetCount: WEEKLY_POST_COUNT,
+    targetCount: weeklyPostCount,
     existingThreads
   });
 
@@ -380,7 +400,7 @@ async function main() {
   const sanitized = generated
     .map((thread) => sanitizeThread(thread, { allowedCategories, usedIds, existingTitles }))
     .filter(Boolean)
-    .slice(0, WEEKLY_POST_COUNT);
+    .slice(0, weeklyPostCount);
 
   if (sanitized.length === 0) {
     console.log('No new threads were added (all candidates were invalid or duplicates).');
