@@ -1,5 +1,6 @@
 import threads from './data/threads.json';
 import ThreadList from './components/ThreadList';
+import NewThreadButton from './components/NewThreadButton';
 
 const totalThreads = threads.length;
 const totalAnswers = threads.reduce((sum, t) => sum + t.answers.length, 0);
@@ -24,10 +25,11 @@ export default function HomePage() {
             monday.com
           </span>
         </h1>
-        <p className="text-slate-500 dark:text-slate-400 text-[17px] leading-relaxed max-w-[520px] mx-auto">
+        <p className="text-slate-500 dark:text-slate-400 text-[17px] leading-relaxed max-w-[520px] mx-auto mb-6">
           The community for monday.com power users. Get honest answers, share
           workflows, and level up your productivity.
         </p>
+        <NewThreadButton />
       </section>
 
       {/* Stats */}

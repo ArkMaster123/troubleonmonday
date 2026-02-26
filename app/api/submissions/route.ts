@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createSubmission } from '../../../lib/db';
+import { generatePseudonym } from '../../../lib/pseudonyms';
 
 const VALID_CATEGORIES = [
   'Comparison', 'Pricing', 'Tutorial', 'CRM', 'Templates',
@@ -33,15 +34,22 @@ export async function POST(request: NextRequest) {
 
     const safeCategory = VALID_CATEGORIES.includes(category) ? category : 'General';
     const safeEmail = typeof author_email === 'string' ? author_email.trim().slice(0, 254) : '';
+    const authorName = generatePseudonym();
 
     const submission = createSubmission(
       title.trim(),
       content.trim(),
       safeCategory,
       safeEmail,
+      authorName,
     );
 
-    return NextResponse.json({ success: true, message: 'Submission received! It will appear after review.', id: submission.id });
+    return NextResponse.json({
+      success: true,
+      message: 'Submission received! It will appear after review.',
+      id: submission.id,
+      author_name: submission.author_name,
+    });
   } catch {
     return NextResponse.json({ success: false, error: 'Something went wrong' }, { status: 500 });
   }

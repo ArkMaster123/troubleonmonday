@@ -1,6 +1,7 @@
 import threads from '../../data/threads.json';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import AnswerForm from '../../components/AnswerForm';
 
 interface ThreadPageProps {
   params: Promise<{ id: string }>;
@@ -201,26 +202,7 @@ export default async function ThreadPage({ params }: ThreadPageProps) {
         </div>
 
         {/* Reply */}
-        <div className="p-7 border-t border-slate-200 dark:border-white/[0.06] bg-slate-50 dark:bg-slate-900/50">
-          <h3 className="text-sm font-semibold mb-3">Your Answer</h3>
-          <textarea
-            className="w-full p-3.5 min-h-[140px] border border-slate-200 dark:border-white/[0.06] rounded-xl bg-white dark:bg-slate-900 text-[15px] leading-relaxed resize-y mb-3 transition-all focus:outline-none focus:border-red-500 focus:ring-[3px] focus:ring-red-500/10 placeholder:text-slate-300 dark:placeholder:text-slate-600"
-            placeholder="Share your experience or knowledge..."
-            rows={6}
-          />
-          <div className="flex justify-between items-center">
-            <span className="text-xs text-slate-400 dark:text-slate-500">
-              Markdown supported
-            </span>
-            <button className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-red-500 hover:bg-red-600 text-white font-semibold text-sm rounded-lg transition-all hover:shadow-[0_0_20px_rgba(239,68,68,0.15)] cursor-pointer">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13" />
-                <polygon points="22 2 15 22 11 13 2 9 22 2" />
-              </svg>
-              Post Answer
-            </button>
-          </div>
-        </div>
+        <AnswerForm threadId={thread.id} />
       </article>
 
       {/* CTA */}

@@ -145,18 +145,18 @@ export default function RootLayout({
               >
                 Born &amp; Brand
               </a>
-              <a
-                href="/"
+              <Link
+                href="/privacy"
                 className="text-[13px] text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-50 transition-colors"
               >
                 Privacy
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                href="/terms"
                 className="text-[13px] text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-50 transition-colors"
               >
                 Terms
-              </a>
+              </Link>
             </div>
           </div>
         </footer>
