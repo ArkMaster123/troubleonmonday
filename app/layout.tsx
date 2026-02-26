@@ -189,6 +189,18 @@ export default function RootLayout({
               </Link>
             </div>
           </div>
+          <p className="max-w-[1140px] mx-auto mt-4 text-[11px] leading-relaxed text-center text-slate-400 dark:text-slate-500">
+            Trouble on Mondays is an independent community forum and is not affiliated with, endorsed by, or officially connected to monday.com Ltd. or any of its subsidiaries or affiliates. The official monday.com website is located at{' '}
+            <a
+              href="https://monday.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-slate-600 dark:hover:text-slate-300"
+            >
+              monday.com
+            </a>
+            . Any references to &quot;monday.com&quot; are for descriptive purposes only.
+          </p>
         </footer>
 
         <NewThreadScript />
