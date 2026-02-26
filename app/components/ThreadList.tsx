@@ -7,6 +7,7 @@ type Filter = 'latest' | 'top' | 'unanswered';
 
 interface Thread {
   id: string;
+  href?: string;
   title: string;
   category: string;
   tags: string[];
@@ -153,7 +154,7 @@ export default function ThreadList({ threads }: { threads: Thread[] }) {
                 </div>
 
                 <Link
-                  href={`/thread/${thread.id}/`}
+                  href={thread.href || `/thread/${thread.id}/`}
                   className="block text-base font-semibold mb-1.5 leading-snug tracking-tight transition-colors hover:text-red-500 group-hover:text-red-500"
                 >
                   {thread.title}

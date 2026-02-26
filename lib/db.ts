@@ -5,16 +5,37 @@ import path from 'path';
 const DEFAULT_LOCAL_DB_PATH = path.join(process.cwd(), 'data', 'submissions.db');
 const DEFAULT_PROD_DB_PATH = '/home/noah/data/troubleonmonday.db';
 
-const DB_PATH =
-  process.env.SUBMISSIONS_DB_PATH ||
-  (process.env.NODE_ENV === 'production' ? DEFAULT_PROD_DB_PATH : DEFAULT_LOCAL_DB_PATH);
-
 let db: Database.Database | null = null;
+let resolvedDbPath: string | null = null;
+
+function resolveDbPath(): string {
+  if (resolvedDbPath) {
+    return resolvedDbPath;
+  }
+
+  const configuredPath = process.env.SUBMISSIONS_DB_PATH?.trim();
+  const candidates = configuredPath
+    ? [configuredPath]
+    : process.env.NODE_ENV === 'production'
+      ? [DEFAULT_PROD_DB_PATH, DEFAULT_LOCAL_DB_PATH]
+      : [DEFAULT_LOCAL_DB_PATH];
+
+  for (const candidatePath of candidates) {
+    try {
+      fs.mkdirSync(path.dirname(candidatePath), { recursive: true });
+      resolvedDbPath = candidatePath;
+      return candidatePath;
+    } catch {
+      continue;
+    }
+  }
+
+  throw new Error('Unable to initialize submissions database directory');
+}
 
 export function getDb(): Database.Database {
   if (!db) {
-    fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
-    db = new Database(DB_PATH);
+    db = new Database(resolveDbPath());
     db.pragma('journal_mode = WAL');
     db.exec(`
       CREATE TABLE IF NOT EXISTS submissions (
@@ -39,6 +60,7 @@ export function getDb(): Database.Database {
         status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('pending', 'approved', 'rejected'))
       )
     `);
+    db.exec('CREATE INDEX IF NOT EXISTS idx_answers_thread_id ON answers(thread_id)');
   }
   return db;
 }
@@ -57,6 +79,14 @@ export interface Submission {
 export function getApprovedSubmissions(): Submission[] {
   const db = getDb();
   return db.prepare('SELECT * FROM submissions WHERE status = ? ORDER BY created_at DESC').all('approved') as Submission[];
+}
+
+export function getApprovedSubmissionById(id: number): Submission | null {
+  const db = getDb();
+  const submission = db
+    .prepare('SELECT * FROM submissions WHERE id = ? AND status = ?')
+    .get(id, 'approved') as Submission | undefined;
+  return submission ?? null;
 }
 
 export function getAllSubmissions(): Submission[] {

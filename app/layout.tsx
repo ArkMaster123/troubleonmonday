@@ -3,10 +3,36 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import ThemeToggle from './components/ThemeToggle';
 
+const DEFAULT_BASE_URL = 'https://troubleonmonday.com/troubleonmondays';
+
+function getMetadataBase(): URL {
+  const candidate = process.env.APP_BASE_URL?.trim() || DEFAULT_BASE_URL;
+  const normalized = candidate.endsWith('/') ? candidate : `${candidate}/`;
+  return new URL(normalized);
+}
+
 export const metadata: Metadata = {
+  metadataBase: getMetadataBase(),
   title: 'Trouble on Mondays | monday.com Community Forum',
   description:
     'The community forum for monday.com power users. Get answers, share workflows, and connect with productivity enthusiasts.',
+  alternates: {
+    canonical: './',
+  },
+  openGraph: {
+    type: 'website',
+    title: 'Trouble on Mondays | monday.com Community Forum',
+    description:
+      'The community forum for monday.com power users. Get answers, share workflows, and connect with productivity enthusiasts.',
+    url: './',
+    siteName: 'Trouble on Mondays',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Trouble on Mondays | monday.com Community Forum',
+    description:
+      'The community forum for monday.com power users. Get answers, share workflows, and connect with productivity enthusiasts.',
+  },
 };
 
 function NewThreadScript() {

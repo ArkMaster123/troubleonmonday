@@ -1,17 +1,47 @@
 import threads from './data/threads.json';
 import ThreadList from './components/ThreadList';
 import NewThreadButton from './components/NewThreadButton';
-
-const totalThreads = threads.length;
-const totalAnswers = threads.reduce((sum, t) => sum + t.answers.length, 0);
-const totalViews = threads.reduce((sum, t) => sum + t.views, 0);
+import { getApprovedSubmissions, getAnswersByThread } from '@/lib/db';
+import { createTitleSlug } from '@/lib/slug';
 
 function formatViews(views: number): string {
   if (views >= 1000) return `${(views / 1000).toFixed(1)}k`;
   return views.toString();
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const approvedSubmissions = getApprovedSubmissions();
+
+  const communityThreads = approvedSubmissions.map((submission) => {
+    const answers = getAnswersByThread(`submission:${submission.id}`);
+
+    return {
+      id: `community-${submission.id}`,
+      title: submission.title,
+      category: submission.category,
+      tags: ['community'],
+      author: submission.author_name || 'community.member',
+      timestamp: submission.created_at,
+      votes: 0,
+      views: 0,
+      excerpt: submission.content.slice(0, 220),
+      answers: answers.map((answer) => ({
+        author: answer.author_name,
+        timestamp: answer.created_at,
+        votes: 0,
+        isAccepted: false,
+        content: answer.content,
+      })),
+      isCommunity: true,
+      href: `/thread/community/${submission.id}/${createTitleSlug(submission.title)}/`,
+    };
+  });
+
+  const allThreads = [...threads, ...communityThreads];
+  const totalThreads = allThreads.length;
+  const totalAnswers = allThreads.reduce((sum, thread) => sum + thread.answers.length, 0);
+  const totalViews = allThreads.reduce((sum, thread) => sum + thread.views, 0);
+
   return (
     <div className="max-w-[860px] mx-auto">
       {/* Hero */}
@@ -99,7 +129,7 @@ export default function HomePage() {
       </div>
 
       <div id="discussions">
-        <ThreadList threads={threads} />
+        <ThreadList threads={allThreads} />
       </div>
     </div>
   );

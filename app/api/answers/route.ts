@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createAnswer } from '../../../lib/db';
+import { createAnswer, getApprovedSubmissionById } from '../../../lib/db';
 import { sendNotificationEmail } from '../../../lib/mailer';
 import { generatePseudonym } from '../../../lib/pseudonyms';
 import { buildModerationUrl, getAppBaseUrl } from '../../../lib/admin-moderation';
@@ -25,9 +25,24 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true, message: 'Answer received!' });
     }
 
-    // Validate thread exists
-    const thread = threads.find((t) => t.id === thread_id);
-    if (!thread) {
+    const normalizedThreadId = typeof thread_id === 'string' ? thread_id.trim() : '';
+
+    // Validate thread exists (static thread id or approved community submission id)
+    const staticThread = threads.find((t) => t.id === normalizedThreadId);
+    let threadTitle = staticThread?.title;
+
+    if (!threadTitle) {
+      const submissionMatch = /^submission:(\d+)$/.exec(normalizedThreadId);
+      if (submissionMatch) {
+        const submissionId = Number.parseInt(submissionMatch[1], 10);
+        const submission = getApprovedSubmissionById(submissionId);
+        if (submission) {
+          threadTitle = submission.title;
+        }
+      }
+    }
+
+    if (!threadTitle) {
       return NextResponse.json({ success: false, error: 'Thread not found' }, { status: 404 });
     }
 
@@ -43,7 +58,7 @@ export async function POST(request: NextRequest) {
     const authorName = generatePseudonym();
 
     const answer = createAnswer(
-      thread_id,
+      normalizedThreadId,
       content.trim(),
       safeEmail,
       authorName,
@@ -67,7 +82,7 @@ export async function POST(request: NextRequest) {
       'A new answer was created and is awaiting review.',
       `Answer ID: ${answer.id}`,
       `Thread ID: ${answer.thread_id}`,
-      `Thread title: ${thread.title}`,
+      `Thread title: ${threadTitle}`,
       `Author email: ${answer.author_email || '(not provided)'}`,
       `Author name: ${answer.author_name}`,
       '',
@@ -83,7 +98,7 @@ export async function POST(request: NextRequest) {
         <h2 style="margin:0 0 12px">New Trouble on Mondays answer</h2>
         <p style="margin:0 0 8px"><strong>Answer ID:</strong> ${answer.id}</p>
         <p style="margin:0 0 8px"><strong>Thread ID:</strong> ${escapeHtml(answer.thread_id)}</p>
-        <p style="margin:0 0 8px"><strong>Thread title:</strong> ${escapeHtml(thread.title)}</p>
+        <p style="margin:0 0 8px"><strong>Thread title:</strong> ${escapeHtml(threadTitle)}</p>
         <p style="margin:0 0 8px"><strong>Author email:</strong> ${escapeHtml(answer.author_email || '(not provided)')}</p>
         <p style="margin:0 0 8px"><strong>Author name:</strong> ${escapeHtml(answer.author_name)}</p>
         <p style="margin:12px 0 6px"><strong>Content:</strong></p>
